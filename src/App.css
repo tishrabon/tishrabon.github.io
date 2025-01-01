@@ -1,0 +1,279 @@
+/*HOME'S...*/
+
+/*HOME/WELCOME TISHRABON ANIMATION...*/
+.logo-part {
+  position: absolute;
+  object-fit: contain;
+}
+.logo-part.right {
+  width: 100%;
+  animation: slide-right 1s ease forwards;
+  will-change: transform;
+}
+.logo-part.left {
+  width: 100%;
+  animation: slide-left 1s ease forwards;
+  will-change: transform;
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(1px);
+  }
+}
+
+/*NAVMENU ANIMATION*/
+
+.navBar {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 10px;
+  transition:
+    opacity 0.2s ease,
+    max-height 0.5s ease;
+  max-height: 1px;
+}
+.navBar.show-nav {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 600px;
+}
+
+.navLinks {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.navLinks.show-nav {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headContainer {
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  /*  transition: position 1s ease;*/
+}
+
+.headContainer.headSlideDown {
+  animation: headSLide 0.5s ease forwards;
+  will-change: transform;
+}
+
+.headContainer.headSlideUp {
+  animation: headSlideUp 0.5s ease forwards;
+  will-change: transform;
+}
+
+@keyframes headSLide {
+  from {
+    transform: translateY(-10vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes headSlideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10vh);
+  }
+}
+
+.jumpUnderscore10 {
+  animation: jumpUnderscore 1s steps(1) 10;
+  will-change: transform;
+}
+
+.jumpUnderscore {
+  animation: jumpUnderscore 1s steps(1) infinite;
+  will-change: transform;
+}
+@keyframes jumpUnderscore {
+  50% {
+    color: transparent;
+  }
+}
+
+.rotating360 {
+  animation: rotating360 15s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rotating360 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotatingMonk {
+  animation: rotatingMonk 45s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rotatingMonk {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+/*PHASE TWO EXODUS*/
+
+/*TERMINAL TAP STARTS HERE*/
+
+.darkshadow {
+  box-shadow: 5px 5px 12px 0 #0f172a;
+}
+
+.terminaltap {
+  box-shadow: 0 0 8px 0 #1c1c1c;
+}
+
+.terminalbutton {
+  box-shadow: 0 0 8px 0 #1c1c1c;
+  transition:
+    transform 0.3s,
+    border-radius 0.3s;
+}
+
+.terminalbutton:hover {
+  box-shadow: 0 0 12px 2px #1c1c1c;
+  border-radius: 12px;
+  transform: scale(0.97);
+}
+
+.terminalbutton:active {
+  box-shadow: 0 0 12px 2px #1c1c1c;
+  border-radius: 13px;
+  transform: scale(0.9);
+}
+
+/*TERMINAL REVERSED STARTS HERE*/
+
+.terminaltapRev {
+  box-shadow: inset 0 0 10px 0 #1c1c1c;
+}
+
+.terminalbuttonRev {
+  box-shadow: inset 0 0 8px 0 #1c1c1c;
+  transition:
+    transform 0.3s,
+    border-radius 0.3s;
+}
+
+.terminalbuttonRev:hover {
+  box-shadow: inset 0 0 12px 2px #1c1c1c;
+  border-radius: 12px;
+  transform: scale(0.97);
+}
+
+.terminalbuttonRev:active {
+  box-shadow: inset 0 0 12px 2px #1c1c1c;
+  border-radius: 13px;
+  transform: scale(0.9);
+}
+
+/*MARSHMALLOW TAP STARTS HERE*/
+
+.rubbertap {
+  box-shadow: 0 0 8px 0 #cccccc;
+}
+
+
+.rubbertap2 {
+box-shadow: 0 0 8px 0 #bbbbbb;
+}
+
+.rubberbutton {
+  box-shadow: 0 0 8px 0 #cccccc;
+  transition:
+    transform 0.3s,
+    border-radius 0.3s;
+}
+
+.rubberbutton:hover {
+  box-shadow: 0 0 12px 2px #cccccc;
+  /*  border-radius: 20px;*/
+  transform: scale(0.97);
+}
+
+.rubberbutton:active {
+  box-shadow: 0 0 12px 2px #cccccc;
+  border-radius: 15px;
+  transform: scale(0.9);
+}
+
+/*LIGHT REVERSED*/
+
+.rubbertapRev {
+  box-shadow: inset 0 0 8px 0 #cccccc;
+}
+
+.rubbertapRevJr {
+  box-shadow: inset 0 0 6px 0 #cccccc;
+}
+
+.rubberbuttonRev {
+  box-shadow: inset 0 0 8px 0 #cccccc;
+  transition:
+    transform 0.3s,
+    border-radius 0.3s;
+}
+
+.rubberbuttonRev:hover {
+  box-shadow: inset 0 0 12px 2px #cccccc;
+  border-radius: 10px;
+  transform: scale(0.94, 1.1);
+}
+
+.rubberbuttonRev:active {
+  box-shadow: inset 0 0 12px 2px #cccccc;
+  border-radius: 12px;
+  transform: scale(0.9, 1.2);
+}
+
+
+
+.rubberbuttonRevJr {
+  box-shadow: inset 0 0 6px 0 #cccccc;
+  transition:
+    transform 0.3s,
+    border-radius 0.3s;
+}
+
+.rubberbuttonRevJr:hover {
+  box-shadow: inset 0 0 10px 2px #cccccc;
+  border-radius: 10px;
+  transform: scale(0.94, 1.1);
+}
+
+.rubberbuttonRevJr:active {
+  box-shadow: inset 0 0 10px 2px #cccccc;
+  border-radius: 12px;
+  transform: scale(0.9, 1.2);
+}
+
