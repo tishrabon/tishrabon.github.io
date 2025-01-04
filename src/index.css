@@ -126,6 +126,7 @@ body {
 
 .otherpage-container {
   width: 100%;
+  /*  min-height: 100vh;*/
   padding: 20px;
   margin-top: 140px;
   margin-bottom: 50vh;

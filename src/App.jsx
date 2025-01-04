@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { MdRailwayAlert } from "react-icons/md";
 
 import {
   Home,
@@ -14,6 +15,9 @@ import { themeContext } from "./context/ThemeContext";
 import { ScrollUp } from "./components";
 
 function App() {
+  if (typeof global === "undefined") {
+    var global = window;
+  }
   // const [count, setCount] = useState(0);
   const { theme } = useContext(themeContext);
   const location = useLocation();
@@ -54,15 +58,26 @@ function App() {
 
           <Route path="/portfolio" element={<Portfolio />} />
 
-          <Route path="/side-skills" element={<SideSkills />} />
+          {/*<Route path="/side-skills" element={<SideSkills />} />*/}
 
           <Route path="/hire-dev" element={<HireDev />} />
 
           <Route path="/lets-connect" element={<LetsConnect />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
       <Footer />
+    </div>
+  );
+}
+
+function NotFound() {
+  return (
+    <div className="otherpage-container verticalC gap-5 text-xl">
+      <MdRailwayAlert size={70} />
+      <p className="px-5 text-center">404: Wrong Destination..</p>
     </div>
   );
 }

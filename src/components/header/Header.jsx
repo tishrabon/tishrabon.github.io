@@ -31,11 +31,11 @@ const Header = ({ stick }) => {
       linkNameD: "> portfolio",
       linkNameL: "Portfolio",
     },
-    {
-      address: "/side-skills",
-      linkNameD: "> side-skills",
-      linkNameL: "Side-Skills",
-    },
+    // {
+    //   address: "/side-skills",
+    //   linkNameD: "> side-skills",
+    //   linkNameL: "Side-Skills",
+    // },
     {
       address: "/hire-dev",
       linkNameD: "> hireDev.exe",
@@ -92,7 +92,8 @@ const Header = ({ stick }) => {
       >
         {theme === "dark" ? (
           <div className="text-lg">
-            {">"}<span className="jumpUnderscore10">_</span>
+            {">"}
+            <span className="jumpUnderscore10">_</span>
           </div>
         ) : (
           <div className="h-4 w-5 rounded-sm bg-slate-300"></div>

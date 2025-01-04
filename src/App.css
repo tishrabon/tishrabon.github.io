@@ -140,7 +140,6 @@
   }
 }
 
-
 /*PHASE TWO EXODUS*/
 
 /*TERMINAL TAP STARTS HERE*/
@@ -203,9 +202,8 @@
   box-shadow: 0 0 8px 0 #cccccc;
 }
 
-
 .rubbertap2 {
-box-shadow: 0 0 8px 0 #bbbbbb;
+  box-shadow: 0 0 5px 0 #bbbbbb;
 }
 
 .rubberbutton {
@@ -237,6 +235,10 @@ box-shadow: 0 0 8px 0 #bbbbbb;
   box-shadow: inset 0 0 6px 0 #cccccc;
 }
 
+.rubbertapLite {
+  box-shadow: inset 0 0 4px 0 #cccccc;
+}
+
 .rubberbuttonRev {
   box-shadow: inset 0 0 8px 0 #cccccc;
   transition:
@@ -256,8 +258,6 @@ box-shadow: 0 0 8px 0 #bbbbbb;
   transform: scale(0.9, 1.2);
 }
 
-
-
 .rubberbuttonRevJr {
   box-shadow: inset 0 0 6px 0 #cccccc;
   transition:
@@ -276,4 +276,3 @@ box-shadow: 0 0 8px 0 #bbbbbb;
   border-radius: 12px;
   transform: scale(0.9, 1.2);
 }
-

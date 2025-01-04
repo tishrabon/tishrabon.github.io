@@ -45,7 +45,8 @@ const Home = ({ stick }) => {
   const [navInsight, setNavInsight] = useState("");
   const holla = "I'm your frontend dev, Shrabon!";
 
-  const intro101 = "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
+  const intro101 =
+    "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
 
   const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
 
@@ -114,7 +115,7 @@ const Home = ({ stick }) => {
                 </span>
               </div>
 
-              <p className="horizontalC mb-2 gap-x-2 text-2xl font-bold text-center">
+              <p className="horizontalC mb-2 gap-x-2 text-center text-2xl font-bold">
                 Hello! Good Morning..
               </p>
 
@@ -127,14 +128,17 @@ const Home = ({ stick }) => {
                   <span className="mt-[2px]">
                     <BiSolidTerminal />
                   </span>{" "}
-                  <span>{`tishrabon:\home\intro>run --bio`}</span>
+                  <span>{`tishrabon:\\home\\intro>run --bio`}</span>
                 </div>
                 <div className="flex flex-col items-start justify-start p-2">
-                  <p> {`>`} {intro101} </p>
+                  <p>
+                    {" "}
+                    {`>`} {intro101}{" "}
+                  </p>
                   <div>
                     <p className="text-[#5e8c01]">
-                      <span className="text-main">{">"}</span> Want deeper insight?
-                      Type{" "}
+                      <span className="text-main">{">"}</span> Want deeper
+                      insight? Type{" "}
                       <span className="rounded-sm bg-darkbg px-1 text-base italic text-main">
                         nav --insight
                       </span>{" "}
