@@ -235,7 +235,7 @@
   box-shadow: inset 0 0 6px 0 #cccccc;
 }
 
-.rubbertapLite {
+.rubbertapRevLite {
   box-shadow: inset 0 0 4px 0 #cccccc;
 }
 
@@ -275,4 +275,11 @@
   box-shadow: inset 0 0 10px 2px #cccccc;
   border-radius: 12px;
   transform: scale(0.9, 1.2);
+}
+
+.pf-icon {
+  position: absolute;
+  /*  right: 1%;*/
+  transform: translateX(60%);
+  top: 10%;
 }

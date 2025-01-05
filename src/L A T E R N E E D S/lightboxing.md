@@ -19,6 +19,7 @@ const nextIndex = (currentIndex + 1) % images.length;
 const prevIndex = (currentIndex + images.length - 1) % images.length;
 
 return (
+
 <div className="p-4">
 <img
 src={images[0]}
@@ -60,6 +61,7 @@ const nextIndex = (currentIndex + 1) % images.length;
 const prevIndex = (currentIndex + images.length - 1) % images.length;
 
 return (
+
 <div>
 <button onClick={() => setIsOpen(true)}>Open Lightbox</button>
 

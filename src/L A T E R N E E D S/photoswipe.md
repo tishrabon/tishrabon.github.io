@@ -20,6 +20,7 @@ const sfp01 = [
 
 const Portfolio = () => {
 return (
+
 <div className="gallery-container">
 <h1 className="text-center mb-4">Image Slideshow</h1>
 <Gallery>
