@@ -89,11 +89,11 @@ const Home = ({ stick }) => {
             alt=""
           />
         </div>
-
+{/*
         <div className="hero-trigger">
           Hey! Looking for a fresh creative talented frontend developer who you
           can trust? Great! You are in the right place! Scroll below mate...
-        </div>
+        </div>*/}
       </div>
 
       {/*PLACE HOLDER FOR HEADER*/}
@@ -115,7 +115,7 @@ const Home = ({ stick }) => {
                 </span>
               </div>
 
-              <p className="horizontalC mb-2 gap-x-2 text-center text-2xl font-bold">
+              <p className="horizontalC mb-2 gap-x-2 text-center text-xl font-bold">
                 Hello! Good Morning..
               </p>
 
@@ -354,7 +354,7 @@ const Home = ({ stick }) => {
             </Link>
 
             <span
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "lightshadow bg-lightmain text-vslight"} rounded-md p-2`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} rounded-md p-2`}
             >
               More unique and refined projects are on the way as I'm already
               working on the next one...
