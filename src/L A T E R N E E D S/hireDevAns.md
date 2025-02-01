@@ -40,6 +40,10 @@ ans:
 
 
 4. [LATER]
+ans:
+-> "I’m into customizable simulation-based apps and comprehensive, centralized apps that not only streamline daily tasks but also provide a lasting experience—where years down the line, you can still look back and visualize everything that happened."
+
+
 
 - - - - -
 
