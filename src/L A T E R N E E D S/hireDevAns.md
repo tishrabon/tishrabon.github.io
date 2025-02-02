@@ -39,15 +39,73 @@ ans:
 - - - - -
 
 
-4. [LATER]
+4. What’s your favorite type of project to work on, and why?
 ans:
--> "I’m into customizable simulation-based apps and comprehensive, centralized apps that not only streamline daily tasks but also provide a lasting experience—where years down the line, you can still look back and visualize everything that happened."
 
+-> "I’m into highly customizable simulation-based apps and comprehensive, centralized apps that not only streamline daily tasks but also provide a lasting experience—where years down the line, you can still look back and visualize everything that happened."
+
+--> "I'm into non-competitive, simulation-based apps that let users create highly customizable, unreal worlds. I'm also into working on all-in-one apps that help people manage key life aspects in one place, so they can focus on what truly matters instead of juggling multiple apps."
+
+#-> "I'm into non-competitive, simulation-based apps that let users build highly customizable, unreal worlds. I'm also into all-in-one apps that simplify life, helping people focus on what truly matters instead of juggling multiple apps."
 
 
 - - - - -
 
 
-5. [LATER]
+5. If you could reshape one famous app or website, what would it be and why?
+ans:
+
+-> "I'd reshape YouTube. Their algorithm forces unwanted ads and content with no way to block channels or effectively report ads—all in pursuit of revenue. This short-sighted approach erodes real brand loyalty (mine included) and even causes advertisers to lose potential customers by failing to reach their ideal audience. I’d build a balanced system that truly benefits users, advertisers, and the platform."
+
+
+--> "I'd reshape YouTube. My feed is flooded with unwanted or least relevant content, with no way to block channels or effectively report ads, all in pursuit of revenue. This short-sighted approach erodes genuine brand loyalty (mine included) and frustrates users, leaving advertisers with an audience that's anything but ideal. All this stems from the lack of a real system for users to express their preferences, a system that YouTube simply ignores. I'd introduce robust feedback features to create a healthier balance between users, YouTube, and advertisers."
+
 
 - - - - -
+
+6. What do you bring to the table that other developers don’t?
+ans:
+
+-> "I approach app development from multiple perspectives. I think about how users' needs evolve over time—what they want now, how they’ve changed, and how they’ll change in the future. Whether it’s a long-term project or a short-term one, I might keep user expectations low with high satisfaction, so later I can drop an exclusive feature that will blow their minds. This kind of planning shapes both my design and programming work."
+
+--> "I approach app development from multiple perspectives. I think about how users' needs evolve over time, what they want now, how they’ve changed, and how they’ll change in the future, Whether it’s a long-term project or a short-term one, I might keep user expectations low with high satisfaction, so that later I can drop an exclusive feature that will blow their minds. This kind of vision shapes both my design and programming work."
+
+--> "I approach app development from multiple perspectives. I think about how users' needs evolve over time, what they want now, how they’ve changed, how they’ll change in the future, Whether it’s a long-term or short-term project, I might keep users' expectations low with high satisfaction, so that later I can drop an exclusive feature that will blow their minds. This kind of vision shapes both my design and programming work."
+
+"Finding someone who combines solid coding skills with a long-term vision and strong foundations is rare, but that’s exactly what I bring to the table."
+
+"Great code is just the beginning; it takes vision and strong foundations to truly shape the future."
+
+
+“Great things don’t happen without vision and structure. I bring both to the table.”
+
+
+“Anyone can write code, but not everyone builds with the future in mind.”
+
+I'm not just a programmer. I'm a complete package of solid coding skills and long-term vision with a strategic mindset
+
+#-> "I approach app development from multiple perspectives. I think about how users' needs evolve over time, what they want now, how they’ve changed, how they’ll change in the future, Whether it’s a long-term or short-term project, I might keep users' expectations low with high satisfaction, so that later I can drop an exclusive feature that will blow their minds. This kind of vision shapes both my design and programming work. I'm not just a programmer. I'm a package of solid coding skills and long-term vision with a strategic mindset"
+
+- - - - -
+
+
+7. How do you deal with imposter syndrome, especially in a new role or when you're trying something challenging?
+ans:
+
+-> "When imposter syndrome hits, I trust my ability to analyze the situation from all angles. I break things down, assess the facts and focus on executing one step at a time. It’s all about managing the noise and staying sharp, so I can turn uncertainty into progress."
+
+--> I get what you mean. How about this:
+
+"I can dive into self-doubt without losing my focus. Even when imposter syndrome kicks in, my ability to analyze the situation from multiple angles keeps me calm. I break things down step by step, prioritize, and move forward without letting emotions take over."
+
+- - - - -
+
+
+8. How do you see the future of frontend development, and what role do you want to play in it?
+ans:
+
+-> "AI will undeniably take over many programming jobs, but it won't replace all of us! Talented, dedicated, and skilled developers will always be in demand. My goal is to level up my programming skills to the top tier, ensuring that I remain indispensable even in the age of AI."
+
+--> "It's a crucial fact that AI will undeniably take over many programming jobs, but it won't replace all of us! Talented, dedicated, and skilled developers will always be in demand. My goal is to level up my programming skills to the top tier, ensuring that I remain indispensable in the age of AI. So, I either level up or look for another career path where AI isn't a threat!"
+
+--> 

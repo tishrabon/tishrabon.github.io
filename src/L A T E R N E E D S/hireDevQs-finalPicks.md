@@ -26,6 +26,4 @@
 8. How do you see the future of frontend development, and what role do you want to play in it?
 
 
-9. How do you ensure that your code enhances the user experience while balancing innovative design with technical feasibility?
-
 
