@@ -8,15 +8,10 @@ import { MdOutlineLiveTv } from "react-icons/md";
 import { BsFillLaptopFill } from "react-icons/bs";
 import { GiGearHammer } from "react-icons/gi";
 
-// import { GiVineFlower } from "react-icons/gi";
 import { GiFlowerTwirl } from "react-icons/gi";
-// import { GiVanillaFlower } from "react-icons/gi";
-// import { GiFlowers } from "react-icons/gi";
-// import { GiWrappingStar } from "react-icons/gi";
-// import { SiStarship } from "react-icons/si";
-// import { GiStarSwirl } from "react-icons/gi";
-// import { GiButterflyFlower } from "react-icons/gi";
-// import { GiBowlSpiral } from "react-icons/gi";
+import { FaBehanceSquare } from "react-icons/fa";
+import { IoLinkOutline } from "react-icons/io5";
+import { ImBlogger2 } from "react-icons/im";
 
 const Portfolio = () => {
   const terminalHeading = `tishrabon:\\portfolio\\portfolio.exe`;
@@ -82,33 +77,45 @@ const Portfolio = () => {
 
           {/*source code and live demo links*/}
           <div className={`horizontalC w-full gap-2 text-sm`}>
-            <div
+            <a
+              target="_blank" rel="noopener noreferrer"
+              href="https://myshopp-dusky.vercel.app/"              
               className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
             >
               <FaGithub size={20} />
               <p>sourceCode</p>
-            </div>
+            </a>
 
-            <div
+            <a
+              target="_blank" rel="noopener noreferrer"
+              href="https://myshopp-dusky.vercel.app/"            
               className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
             >
               <MdOutlineLiveTv size={20} />
               <p>liveDemo</p>
-            </div>
+            </a>
           </div>
 
           {/*description about project*/}
-          <div className="px-2">
-            Here will be a brief. Here will be a brief. Here will be a brief.
-            Here will be a brief. Here will be a brief. Here will be a brief.
-            Here will be a brief. Here will be a brief. Here will be a brief.
-            Here will be a brief.
+          <div className="verticalS gap-5">
+            <div>
+              This project isn’t focused on uniqueness, but rather on skill development. It’s a complete React frontend project where I applied my knowledge. Some key highlights are listed below:
+            </div>
+
+            <ul className={`list-disc pl-5 text-left`}>
+              <li>Create account, like products, and add to the cart.</li>
+              <li>Access data from anywhere after logging in.</li>
+              <li>Admin panel for viewing necessary user data.</li>
+              <li>Responsive design for seamless experience across devices.</li>
+              
+            </ul>
           </div>
         </div>
       </div>
 
-      {/*BEHANCE*/}
+      {/*side skills*/}
       <div className={`${theme === 'dark' ? "border-b border-main" : " border-b"} verticalS w-full max-w-[800px] gap-10 px-5 pb-14 mb-14`}>
+        
         {/*ORIGINAL banner icon and intro*/}
         <div className="verticalS gap-5">
           <div className={`relative`}>
@@ -131,7 +138,62 @@ const Portfolio = () => {
           </div>
         </div>
 
+        {/*behance*/}
+        <div className={`${theme === "dark" ? "terminaltap rounded-md" : "rounded-[20px] rubbertapRev"} verticalS mx-5 w-full gap-5 px-2 py-5`}>
 
+          <p className={`${theme === "dark" ? "border-main" : ""} border-b`}>
+            Behance
+          </p>
+
+          <div className={`${theme === "dark" ? "" : ""} verticalS gap-5`}>
+            <a 
+              target="_blank" rel="noopener noreferrer"
+              href="https://www.behance.net/tishrabon"
+            >
+              <FaBehanceSquare size={80} className={`${theme === "dark" ? "" : "text-lightmain"}`} />
+            </a>                        
+            <div className={`${theme === "dark" ? "border-main" : ""} border-b horizontalC gap-2 text-sm sm:text-base`}>
+              <IoLinkOutline />                              
+              <p>behance.net/tishrabon</p>              
+            </div>
+
+            <div>
+              Here’s a peek at some graphic design projects I’ve worked on in my spare time. Click the icon above to navigate to my full profile.
+            </div>
+          </div>
+          
+        </div>
+
+        {/*blogger*/}
+        <div className={`${theme === "dark" ? "terminaltap rounded-md" : "rounded-[20px] rubbertapRev"} verticalS mx-5 w-full gap-5 px-2 py-5`}>
+
+          <p className={`${theme === "dark" ? "border-main" : ""} border-b`}>
+            Blogger
+          </p>
+
+          <div className={`${theme === "dark" ? "" : ""} verticalS gap-5`}>
+            <a 
+              target="_blank" rel="noopener noreferrer"
+              href="https://tishrabon.blogspot.com/"
+            >
+              <ImBlogger2 size={72} className={`${theme === "dark" ? "" : "text-lightmain"}`} />
+            </a>                        
+            <div className={`${theme === "dark" ? "border-main" : ""} border-b horizontalC gap-2 text-sm sm:text-base`}>
+              <IoLinkOutline />                              
+              <p>tishrabon.blogspot.com</p>              
+            </div>
+
+            <div>
+              I wrote an article out of passion about the history and context of the Goatee, but it’s unfortunately written in Bengali. You can check it out if you're interested by clicking the icon above.
+            </div>
+          </div>
+          
+        </div>
+
+        {/*blogspot*/}
+        <div>
+          
+        </div>
         
       </div>
     </div>

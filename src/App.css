@@ -283,3 +283,24 @@
   transform: translateX(60%);
   top: 10%;
 }
+
+.hireDev-round2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10%;
+}
+
+.hireDev-round {
+  position: absolute;
+  left: 70%;
+/*  transform: translateX(-50%);*/
+  top: 1%;
+}
+
+.hireDev-approve {
+  position: absolute;
+  left: 60%;
+  transform: translateX(50%);
+  top: 6%;  
+}

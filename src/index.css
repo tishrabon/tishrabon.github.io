@@ -146,6 +146,13 @@ body {
   align-items: center;
 }
 
+.verticalLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
 .horizontalS {
   display: flex;
   flex-direction: row;

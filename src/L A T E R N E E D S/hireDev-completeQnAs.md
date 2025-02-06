@@ -12,10 +12,11 @@ ans: "If someone’s giving me constructive criticism, it means I either lack so
 
 4. What’s your favorite type of project to work on, and why?
 ans: "I'm into non-competitive, simulation-based apps that let users build highly customizable, unreal worlds. I'm also into all-in-one apps that simplify life, helping people focus on what truly matters instead of juggling multiple apps."
+>> pending.... <<
 
 
 5. If you could reshape one famous app or website, what would it be and why?
-ans: "I'd reshape YouTube. My feed is flooded with unwanted or least relevant content, with no way to block channels or effectively report ads, all in pursuit of revenue. This short-sighted approach erodes genuine brand loyalty (mine included) and frustrates users, leaving advertisers with an audience that's anything but ideal. All this stems from the lack of a real system for users to express their preferences, a system that YouTube simply ignores. I'd introduce robust feedback features to create a healthier balance between users, YouTube, and advertisers."
+ans: "I'd reshape YouTube. My feed is flooded with unwanted or least wanted content, with no way to block channels or effectively report ads, all in pursuit of revenue. This short-sighted approach erodes genuine brand loyalty (mine included) and frustrates users, leaving advertisers with an audience that's anything but ideal. All this stems from the lack of a real system for users to express their preferences, a system that YouTube simply ignores. I'd introduce robust feedback features to create a healthier balance between users, YouTube, and advertisers."
 
 
 6. What do you bring to the table that other developers don’t?
@@ -28,3 +29,4 @@ ans: "I can dive into self-doubt without losing my focus. Even when imposter syn
 
 8. How do you see the future of frontend development, and what role do you want to play in it?
 ans: "It's a crucial fact that AI will undeniably take over many programming jobs, but it won't replace all of us! Talented, dedicated, and skilled developers will always be in demand. My goal is to level up my programming skills to the top tier, ensuring that I remain indispensable in the age of AI. So, I either level up or look for another career path where AI isn't a threat!"
+
