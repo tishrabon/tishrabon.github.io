@@ -1,6 +1,5 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import { themeContext } from '../../context/ThemeContext'
 
 import { FaqData } from "./FaqData";
 import { TfiThought } from "react-icons/tfi";
@@ -10,14 +9,11 @@ import {
 } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa";
 import { BiSolidTerminal } from "react-icons/bi";
-import { TbPointFilled } from "react-icons/tb";
-import { LuMousePointerClick } from "react-icons/lu";
 
 const FaqTerminal = () => {
   const demo = `[ans to q1] I approach app development from multiple perspectives. I think about how users' needs evolve over time, what they want now, how they’ve changed, how they’ll change in the future, Whether it’s a long-term or short-term project, I might keep users' expectations low with high satisfaction, so that later I can drop an exclusive feature that will blow their minds. This kind of vision shapes both my design and programming work. I'm not just a programmer. I'm a package of solid coding skills and long-term vision with a strategic mindset`;
 
   const navigate = useNavigate();
-  const { toggleTheme } = useContext(themeContext);
 
   const initMsg = `kire chandu??`;
   const [stack, setStack] = useState([]);
@@ -32,39 +28,18 @@ const FaqTerminal = () => {
 
     if (found) {
       console.log(found);
-
       if (found.type === 'qna') {
         let qnaResult = found.label + " " + found.answer;
         setStack([...stack, qnaResult]);        
       }
-
       else if (found.type === 'clearStack') {
         setStack([]);
       }
-
       else if (found.type === 'heydev') {
         let knowMore = found.answer;
         setStack([...stack, knowMore]);
       }
-
-      else if (found.type === 'navinsight') {
-        navigate("/devs-insight");
-      }
-
-      else if (found.type === 'switchtheme') {
-        toggleTheme();
-      }
-
-      else if (found.type === 'opalt') {
-        let temp = `I'm sorry that you didn't like this process. How can I make it better? I would deeply appreciate your feedback! You can also switch to Marshmallow Mode—it's designed to be effortless and smooth.`;
-        setStack([...stack, temp]);
-      }    
-
-      else if (found.type === 'teabreak') {
-        let tempTea = `This is a fun goal made to bring a smile to your face. Not done yet, working on it...`;
-        setStack([...stack, tempTea]);
-      }                    
-
+      
       else {
         setStack([...stack, "Sorry! Try again!"]);
       }
@@ -100,23 +75,20 @@ const FaqTerminal = () => {
       {/*QUESTION LISTS/COMMANDS*/}
       <div className={`verticalS gap-5`}>
         {FaqData.map((qna, index) => (
-          qna.type === 'qna' && (
-            <div key={qna.getCmd} className={`terminaltap rounded-md p-2`}>
-              <p>
-                {index + 1} {qna.question}{" "}
-                <span className="whitespace-nowrap rounded-sm bg-vsmain px-2">
-                  {qna.getCmd}
-                </span>
-              </p>
-            </div>
-          )
+          <div key={qna.getCmd} className={`terminaltap rounded-md p-2`}>
+            <p>
+              {index + 1} {qna.question}{" "}
+              <span className="whitespace-nowrap rounded-sm bg-vsmain px-2">
+                {qna.getCmd}
+              </span>
+            </p>
+          </div>
         ))}
       </div>
 
       {/*THE TERMINAL*/}
       <div
         className={`w-full max-w-[700px] overflow-hidden rounded-[5px] bg-vsmain text-left`}
-        onClick={() => {inputRef.current.focus()}}
       >
         <div
           className={`horizontalS gap-1 bg-main p-2 text-[13px] text-vsmain`}
@@ -155,7 +127,8 @@ const FaqTerminal = () => {
 
           {/*INPUT SECTION*/}
           <div 
-            className={`flex flex-row justify-start items-start gap-1`}            
+            className={`flex flex-row justify-start items-start gap-1`}
+            onClick={() => {inputRef.current.focus()}}
           >      
             <span>{">"}</span>
             <input type="text" ref={inputRef}
@@ -172,13 +145,6 @@ const FaqTerminal = () => {
             <span className="jumpUnderscore">{"_"}</span>
           </div>
         </div>
-      </div>
-
-      <div className={`max-w-[700px] verticalS gap-3 text-sm`}>
-
-      <LuMousePointerClick size={30} className="text-vsmain" />
-
-      <p>If you are not comfortable with this process then you can switch theme to Marshmallow. (Click the left button in the header to switch theme)</p>        
       </div>
     </div>
   );

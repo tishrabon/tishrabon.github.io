@@ -89,7 +89,7 @@ const Home = ({ stick }) => {
             alt=""
           />
         </div>
-{/*
+        {/*
         <div className="hero-trigger">
           Hey! Looking for a fresh creative talented frontend developer who you
           can trust? Great! You are in the right place! Scroll below mate...
@@ -139,7 +139,7 @@ const Home = ({ stick }) => {
                     <p className="text-[#5e8c01]">
                       <span className="text-main">{">"}</span> Want deeper
                       insight? Type{" "}
-                      <span className="rounded-sm bg-darkbg px-1 text-base italic text-main whitespace-nowrap">
+                      <span className="whitespace-nowrap rounded-sm bg-darkbg px-1 text-base italic text-main">
                         nav --insight
                       </span>{" "}
                       command below and hit enter to learn more about me!

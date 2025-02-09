@@ -18,11 +18,12 @@ const HireDev = () => {
   const marshmallowHeading = `Hire Dev`;
   const { theme } = useContext(themeContext);
 
-  const sample = `In an ecosystem with more limited factors, I’ve developed a level of quality, ambition, vision, and drive that’s rare. You’re getting someone with a rare mindset, vision, and resilience who stands out no matter where you're looking. Give me the opportunity to grow and go further, before someone else does, and I’ll show you why I’m worth the investment.`
+  const sample = `In an ecosystem with more limited factors, I’ve developed a level of quality, ambition, vision, and drive that’s rare. You’re getting someone with a rare mindset, vision, and resilience who stands out no matter where you're looking. Give me the opportunity to grow and go further, before someone else does, and I’ll show you why I’m worth the investment.`;
 
   const sample2 = `In my early university semesters, while most struggled with core programming in C, I found it exciting and intuitive. Once, I even scored the highest in a semester final without studying at all the night before. Currently focused on frontend development, I aim to become a full-stack developer and plan to revisit problem-solving once I land a job. In short, I love programming!`;
 
-  const pitching = "I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment. I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it."
+  const pitching =
+    "I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment. I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it.";
 
   return (
     <div className="otherpage-container verticalS text-center">
@@ -33,10 +34,10 @@ const HireDev = () => {
 
       {/*section 1 container*/}
       <div className="verticalS mx-5 mt-5 gap-10">
-
-        {/*banner & intro container*/} 
-        <div className={`flex flex-col justify-center items-center sm:flex-row sm:items-center gap-5 sm:gap-10 md:gap-20 max-w-[700px]`}>          
-
+        {/*banner & intro container*/}
+        <div
+          className={`flex max-w-[700px] flex-col items-center justify-center gap-5 sm:flex-row sm:items-center sm:gap-10 md:gap-20`}
+        >
           {/*BANNER*/}
           <div className={`relative w-[200px]`}>
             <FaAddressCard
@@ -51,63 +52,91 @@ const HireDev = () => {
               />
             </div>
 
-            <div className={`${theme === "dark" ? "text-vsmain" : "text-vslight"} hireDev-approve z-[200] text-[60px] text-center`}>
+            <div
+              className={`${theme === "dark" ? "text-vsmain" : "text-vslight"} hireDev-approve z-[200] text-center text-[60px]`}
+            >
               <FaQuestionCircle />
             </div>
-          </div>   
-          
-          {/*intro*/}
-          <div className={`flex flex-col justify-center items-center sm:items-start`}>
+          </div>
 
-            <div className={`text-lg`}>
-              Hey again!
+          {/*intro*/}
+          <div
+            className={`flex flex-col items-center justify-center sm:items-start`}
+          >
+            <div className={`text-lg`}>Hey again!</div>
+
+            <div className={`mb-3 text-2xl sm:text-left`}>
+              I'm your frontend reactJs dev, Shrabon!
             </div>
 
-            <div className={`text-2xl mb-3 sm:text-left`}>
-              I'm your frontend reactJs dev, Shrabon!
-            </div>   
-
-            <div className={`${theme === "dark" ? "bg-main text-vsmain" : "rubbertap"} p-2 w-auto rounded-md`}>
+            <div
+              className={`${theme === "dark" ? "bg-main text-vsmain" : "rubbertap"} w-auto rounded-md p-2`}
+            >
               Currently I'm open to job opportunities...
             </div>
-
-          </div>       
+          </div>
         </div>
 
         {/*the pitching*/}
-        <div className="verticalC max-w-[600px] gap-5">          
-          <BiSolidMessageDetail size={120} className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}/>
+        <div className="verticalC max-w-[600px] gap-5">
+          <BiSolidMessageDetail
+            size={120}
+            className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}
+          />
 
-          <div className={`${theme === "dark" ? "terminaltap" : "rubbertap"} py-8 px-2 rounded-[15px] text-[16px] sm:text-[18px]`}>
-
+          <div
+            className={`${theme === "dark" ? "terminaltap" : "rubbertap"} rounded-[15px] px-2 py-8 text-[16px] sm:text-[18px]`}
+          >
             <div className={`mb-3 flex flex-col items-start`}>
-              <FaQuoteLeft  size={50} className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}/>
-              <span className="">I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment.
+              <FaQuoteLeft
+                size={50}
+                className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}
+              />
+              <span className="">
+                I'm a fresher & this is my 2nd project, reflecting the quality
+                and uniqueness of my work. I designed this portfolio with
+                multiple perspectives in mind so that it can fit into even more
+                paradigms, and I’ll do even better when I have the opportunity
+                to grow in a real work environment.
               </span>
             </div>
 
-            <div className={`mb-3 flex flex-col items-end`}>              
-              <span className="">I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it.
+            <div className={`mb-3 flex flex-col items-end`}>
+              <span className="">
+                I'm starting as a frontend dev with plans to evolve into a
+                full-stack dev because I’m passionate about coding and building
+                a career around it.
               </span>
-              <FaQuoteRight  size={50} className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}/>
+              <FaQuoteRight
+                size={50}
+                className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}
+              />
             </div>
-
           </div>
         </div>
 
         {/*cta for connections*/}
-        <div className={`${theme === "dark" ? "bg-vsmain rounded-md" : "rubbertapRev rounded-[20px]"} p-5 verticalS`}>
-          <FaHandshake size={100} className={`border-b ${theme === "dark" ? "border-main" : "text-lightmain"} mb-5`}/>
+        <div
+          className={`${theme === "dark" ? "rounded-md bg-vsmain" : "rubbertapRev rounded-[20px]"} verticalS p-5`}
+        >
+          <FaHandshake
+            size={100}
+            className={`border-b ${theme === "dark" ? "border-main" : "text-lightmain"} mb-5`}
+          />
 
-          <p className={`sm:text-lg`}>Whether I caught your interest or not, I’d still love to connect. Or just drop some feedback on my work, It would truly mean a lot and help me learn.</p>
+          <p className={`sm:text-lg`}>
+            Whether I caught your interest or not, I’d still love to connect. Or
+            just drop some feedback on my work, It would truly mean a lot and
+            help me learn.
+          </p>
 
-          <button className={`${theme === "dark" ? "bg-main text-vsmain" : "rubberbuttonRevJr"} p-2 px-6 my-5 rounded-[10px] sm:text-lg`}>
+          <button
+            className={`${theme === "dark" ? "bg-main text-vsmain" : "rubberbuttonRevJr"} my-5 rounded-[10px] p-2 px-6 sm:text-lg`}
+          >
             Let's Connect!
           </button>
         </div>
-        
-      </div>     
-
+      </div>
     </div>
   );
 };

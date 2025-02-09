@@ -26,8 +26,9 @@ const Portfolio = () => {
       />
 
       {/*PORTFOLIO CONTAINER*/}
-      <div className={`${theme === 'dark' ? "border-b border-main" : " border-b"} verticalS mt-[-40px] w-full max-w-[800px] gap-10 px-5 pb-14`}>
-        
+      <div
+        className={`${theme === "dark" ? "border-b border-main" : "border-b"} verticalS mt-[-40px] w-full max-w-[800px] gap-10 px-5 pb-14`}
+      >
         {/*ORIGINAL banner icon and intro*/}
         <div className="verticalS gap-5">
           <div className={`relative`}>
@@ -48,14 +49,14 @@ const Portfolio = () => {
           <div className={`${theme === "dark" ? "" : ""} w-full text-lg`}>
             Here’s my first project. This portfolio itself is my second,
             reflecting the progress from the first. As I continue building, you
-            can expect more refined and impactful work. For now, this gives you a
-            glimpse of where I’m heading.
+            can expect more refined and impactful work. For now, this gives you
+            a glimpse of where I’m heading.
           </div>
         </div>
 
         {/*each sfp-show container*/}
         <div
-          className={`${theme === "dark" ? "terminaltap rounded-md" : "rounded-[20px] rubbertapRev"} verticalS mx-5 w-full gap-5 px-2 py-5`}
+          className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} verticalS mx-5 w-full gap-5 px-2 py-5`}
         >
           {/*project title*/}
           <p
@@ -78,8 +79,9 @@ const Portfolio = () => {
           {/*source code and live demo links*/}
           <div className={`horizontalC w-full gap-2 text-sm`}>
             <a
-              target="_blank" rel="noopener noreferrer"
-              href="https://myshopp-dusky.vercel.app/"              
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://myshopp-dusky.vercel.app/"
               className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
             >
               <FaGithub size={20} />
@@ -87,8 +89,9 @@ const Portfolio = () => {
             </a>
 
             <a
-              target="_blank" rel="noopener noreferrer"
-              href="https://myshopp-dusky.vercel.app/"            
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://myshopp-dusky.vercel.app/"
               className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
             >
               <MdOutlineLiveTv size={20} />
@@ -99,7 +102,9 @@ const Portfolio = () => {
           {/*description about project*/}
           <div className="verticalS gap-5">
             <div>
-              This project isn’t focused on uniqueness, but rather on skill development. It’s a complete React frontend project where I applied my knowledge. Some key highlights are listed below:
+              This project isn’t focused on uniqueness, but rather on skill
+              development. It’s a complete React frontend project where I
+              applied my knowledge. Some key highlights are listed below:
             </div>
 
             <ul className={`list-disc pl-5 text-left`}>
@@ -107,15 +112,15 @@ const Portfolio = () => {
               <li>Access data from anywhere after logging in.</li>
               <li>Admin panel for viewing necessary user data.</li>
               <li>Responsive design for seamless experience across devices.</li>
-              
             </ul>
           </div>
         </div>
       </div>
 
       {/*side skills*/}
-      <div className={`${theme === 'dark' ? "border-b border-main" : " border-b"} verticalS w-full max-w-[800px] gap-10 px-5 pb-14 mb-14`}>
-        
+      <div
+        className={`${theme === "dark" ? "border-b border-main" : "border-b"} verticalS mb-14 w-full max-w-[800px] gap-10 px-5 pb-14`}
+      >
         {/*ORIGINAL banner icon and intro*/}
         <div className="verticalS gap-5">
           <div className={`relative`}>
@@ -131,70 +136,84 @@ const Portfolio = () => {
               />
             </div>
           </div>
-          
+
           {/*some words about my one and only project to show yall*/}
           <div className={`${theme === "dark" ? "" : ""} w-full text-lg`}>
-            Beyond coding, I’ve done some graphic design and written a blog article purely out of passion. These aren’t professional works, but you can check them out through the links below..
+            Beyond coding, I’ve done some graphic design and written a blog
+            article purely out of passion. These aren’t professional works, but
+            you can check them out through the links below..
           </div>
         </div>
 
         {/*behance*/}
-        <div className={`${theme === "dark" ? "terminaltap rounded-md" : "rounded-[20px] rubbertapRev"} verticalS mx-5 w-full gap-5 px-2 py-5`}>
-
+        <div
+          className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} verticalS mx-5 w-full gap-5 px-2 py-5`}
+        >
           <p className={`${theme === "dark" ? "border-main" : ""} border-b`}>
             Behance
           </p>
 
           <div className={`${theme === "dark" ? "" : ""} verticalS gap-5`}>
-            <a 
-              target="_blank" rel="noopener noreferrer"
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://www.behance.net/tishrabon"
             >
-              <FaBehanceSquare size={80} className={`${theme === "dark" ? "" : "text-lightmain"}`} />
-            </a>                        
-            <div className={`${theme === "dark" ? "border-main" : ""} border-b horizontalC gap-2 text-sm sm:text-base`}>
-              <IoLinkOutline />                              
-              <p>behance.net/tishrabon</p>              
+              <FaBehanceSquare
+                size={80}
+                className={`${theme === "dark" ? "" : "text-lightmain"}`}
+              />
+            </a>
+            <div
+              className={`${theme === "dark" ? "border-main" : ""} horizontalC gap-2 border-b text-sm sm:text-base`}
+            >
+              <IoLinkOutline />
+              <p>behance.net/tishrabon</p>
             </div>
 
             <div>
-              Here’s a peek at some graphic design projects I’ve worked on in my spare time. Click the icon above to navigate to my full profile.
+              Here’s a peek at some graphic design projects I’ve worked on in my
+              spare time. Click the icon above to navigate to my full profile.
             </div>
           </div>
-          
         </div>
 
         {/*blogger*/}
-        <div className={`${theme === "dark" ? "terminaltap rounded-md" : "rounded-[20px] rubbertapRev"} verticalS mx-5 w-full gap-5 px-2 py-5`}>
-
+        <div
+          className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} verticalS mx-5 w-full gap-5 px-2 py-5`}
+        >
           <p className={`${theme === "dark" ? "border-main" : ""} border-b`}>
             Blogger
           </p>
 
           <div className={`${theme === "dark" ? "" : ""} verticalS gap-5`}>
-            <a 
-              target="_blank" rel="noopener noreferrer"
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://tishrabon.blogspot.com/"
             >
-              <ImBlogger2 size={72} className={`${theme === "dark" ? "" : "text-lightmain"}`} />
-            </a>                        
-            <div className={`${theme === "dark" ? "border-main" : ""} border-b horizontalC gap-2 text-sm sm:text-base`}>
-              <IoLinkOutline />                              
-              <p>tishrabon.blogspot.com</p>              
+              <ImBlogger2
+                size={72}
+                className={`${theme === "dark" ? "" : "text-lightmain"}`}
+              />
+            </a>
+            <div
+              className={`${theme === "dark" ? "border-main" : ""} horizontalC gap-2 border-b text-sm sm:text-base`}
+            >
+              <IoLinkOutline />
+              <p>tishrabon.blogspot.com</p>
             </div>
 
             <div>
-              I wrote an article out of passion about the history and context of the Goatee, but it’s unfortunately written in Bengali. You can check it out if you're interested by clicking the icon above.
+              I wrote an article out of passion about the history and context of
+              the Goatee, but it’s unfortunately written in Bengali. You can
+              check it out if you're interested by clicking the icon above.
             </div>
           </div>
-          
         </div>
 
         {/*blogspot*/}
-        <div>
-          
-        </div>
-        
+        <div></div>
       </div>
     </div>
   );

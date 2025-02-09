@@ -44,8 +44,9 @@ const Home = ({ stick }) => {
   const [falseCmdCounts, setFalseCmdCounts] = useState(0);
   const [navInsight, setNavInsight] = useState("");
   const holla = "I'm your frontend dev, Shrabon!";
+
   const intro101 =
-    "Focused on crafting and counting every tiny aspect. Committed to perfection, Originality and the urge to make things happen aren’t just what I do, it’s who I am.";
+    "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
 
   const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
 
@@ -88,11 +89,6 @@ const Home = ({ stick }) => {
             alt=""
           />
         </div>
-
-        <div className="hero-trigger">
-          Hey! Looking for a fresh creative talented frontend developer who you
-          can trust? Great! You are in the right place! Scroll below mate...
-        </div>
       </div>
 
       {/*PLACE HOLDER FOR HEADER*/}
@@ -114,7 +110,7 @@ const Home = ({ stick }) => {
                 </span>
               </div>
 
-              <p className="horizontalC mb-2 gap-x-2 text-2xl font-bold">
+              <p className="horizontalC mb-2 gap-x-2 text-center text-xl font-bold">
                 Hello! Good Morning..
               </p>
 
@@ -127,22 +123,25 @@ const Home = ({ stick }) => {
                   <span className="mt-[2px]">
                     <BiSolidTerminal />
                   </span>{" "}
-                  <span>tishrabon:\home\intro>run --bio</span>
+                  <span>{`tishrabon:\\bio\\terminal.exe`}</span>
                 </div>
                 <div className="flex flex-col items-start justify-start p-2">
-                  <p> > {intro101} </p>
+                  <p>
+                    {" "}
+                    {`>`} {intro101}{" "}
+                  </p>
                   <div>
                     <p className="text-[#5e8c01]">
-                      <span className="text-main">></span> Want deeper insight?
-                      Type{" "}
-                      <span className="rounded-sm bg-darkbg px-1 text-base italic text-main">
+                      <span className="text-main">{">"}</span> Want deeper
+                      insight? Type{" "}
+                      <span className="whitespace-nowrap rounded-sm bg-darkbg px-1 text-base italic text-main">
                         nav --insight
                       </span>{" "}
                       command below and hit enter to learn more about me!
                     </p>
 
                     <div className={`${falseCmd ? "" : "hidden"}`}>
-                      <span>></span>{" "}
+                      <span>{"> "}</span>
                       <span className="text-base text-red-600">
                         Wrong command alert! Please enter correct command!(x
                         {falseCmdCounts})
@@ -150,6 +149,7 @@ const Home = ({ stick }) => {
                     </div>
                     <div onClick={() => terminalInputRef.current.focus()}>
                       {"> "}
+
                       <input
                         ref={terminalInputRef}
                         className={`border-none bg-transparent p-0 text-inherit outline-none`}
@@ -163,6 +163,7 @@ const Home = ({ stick }) => {
                           }
                         }}
                       />
+                      
                       <span className="jumpUnderscore">{"_"}</span>
                     </div>
                   </div>
@@ -235,7 +236,7 @@ const Home = ({ stick }) => {
               </span>
 
               <button
-                className={`${theme === "dark" ? "terminalbuttonRev" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+                className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
               >
                 <Link className="" to="/devs-insight">
                   {">>"} More Insights {"<<"}
@@ -272,7 +273,7 @@ const Home = ({ stick }) => {
               </div>
               <div className={`${toolsClass}`}>
                 <SiRedux size={70} />
-                <p className="text-sm">reduxRtk</p>
+                <p className="text-sm">redux/rtk</p>
               </div>
             </div>
 
@@ -305,7 +306,7 @@ const Home = ({ stick }) => {
             </span>
 
             <Link
-              className={`${theme === "dark" ? "terminalbuttonRev" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+              className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
               to="/devs-insight"
             >
               {">>"} More Insights {"<<"}
@@ -343,14 +344,14 @@ const Home = ({ stick }) => {
             </span>
 
             <Link
-              className={`${theme === "dark" ? "terminalbuttonRev" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+              className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
               to="/portfolio"
             >
               {">>"} My Works {"<<"}
             </Link>
 
             <span
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "lightshadow bg-lightmain text-vslight"} rounded-md p-2`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} rounded-md p-2`}
             >
               More unique and refined projects are on the way as I'm already
               working on the next one...
@@ -391,7 +392,7 @@ const Home = ({ stick }) => {
             </span>
 
             <Link
-              className={`${theme === "dark" ? "terminalbuttonRev" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+              className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
               to="/hire-dev"
             >
               {">>"} FAQs {"<<"}
@@ -433,7 +434,7 @@ const Home = ({ stick }) => {
             <div></div>
 
             <div
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC w-full rounded-md p-4`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertapRevJr"} verticalC w-full rounded-md p-4`}
             >
               <p>Let's Connect On</p>
               <a
@@ -448,7 +449,7 @@ const Home = ({ stick }) => {
             </div>
 
             <div
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC w-full rounded-md p-4`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertapRevJr"} verticalC w-full rounded-md p-4`}
             >
               <p>Email Me</p>
               <MdEmail size={50} />
@@ -467,7 +468,7 @@ const Home = ({ stick }) => {
             </div>
 
             <Link
-              className={`${theme === "dark" ? "terminalbuttonRev" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+              className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
               to="/lets-connect"
             >
               {">>"} Connect Further {"<<"}

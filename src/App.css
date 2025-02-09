@@ -294,7 +294,7 @@
 .hireDev-round {
   position: absolute;
   left: 70%;
-/*  transform: translateX(-50%);*/
+  /*  transform: translateX(-50%);*/
   top: 1%;
 }
 
@@ -302,5 +302,5 @@
   position: absolute;
   left: 60%;
   transform: translateX(50%);
-  top: 6%;  
+  top: 6%;
 }
