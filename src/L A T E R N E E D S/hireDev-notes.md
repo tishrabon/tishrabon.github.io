@@ -29,3 +29,18 @@ I designed this portfolio with multiple perspectives in mind so that it can fit 
 THE FINAL PITCHING BELOEW YALL!
 
 "I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment. I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it."
+
+
+
+Whether I caught your interest or not, I’d still love to connect. Or just drop some feedback on my work, It would truly mean a lot and help me learn.
+
+
+I’ve also put together some FAQs in the last section, covering questions you might have, feel free to check them out.
+
+
+"Got Questions? Check Below to See If I’ve Already Got the Answer!"
+
+"Got Questions? Browse Below, You Might Find the Answer You’re Looking For!"
+
+
+"here is the list of questions. With each question is attached with a specific command, if you want the answer then you need to give the specific command in terminal below and you will have the answer. If you are not comfortable with this process then you can switch theme to Marshmallow. (toggle theme button is the left button in the header)"

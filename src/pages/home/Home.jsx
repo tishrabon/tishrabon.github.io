@@ -128,7 +128,7 @@ const Home = ({ stick }) => {
                   <span className="mt-[2px]">
                     <BiSolidTerminal />
                   </span>{" "}
-                  <span>{`tishrabon:\\home\\intro>run --bio`}</span>
+                  <span>{`tishrabon:\\bio\\terminal.exe`}</span>
                 </div>
                 <div className="flex flex-col items-start justify-start p-2">
                   <p>
@@ -139,7 +139,7 @@ const Home = ({ stick }) => {
                     <p className="text-[#5e8c01]">
                       <span className="text-main">{">"}</span> Want deeper
                       insight? Type{" "}
-                      <span className="rounded-sm bg-darkbg px-1 text-base italic text-main">
+                      <span className="rounded-sm bg-darkbg px-1 text-base italic text-main whitespace-nowrap">
                         nav --insight
                       </span>{" "}
                       command below and hit enter to learn more about me!

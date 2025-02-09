@@ -10,6 +10,8 @@ import { FaAddressCard } from "react-icons/fa6";
 import { FaQuestionCircle } from "react-icons/fa";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { BiSolidMessageDetail } from "react-icons/bi";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
+import { FaHandshake } from "react-icons/fa";
 
 const HireDev = () => {
   const terminalHeading = `tishrabon:\\portfolio\\hireDev.exe`;
@@ -45,7 +47,7 @@ const HireDev = () => {
             <div className={`hireDev-round z-[10]`}>
               <FaCertificate
                 size={80}
-                className={`${theme === "dark" ? "text-main" : "text-main"} rotatingMonk`}
+                className={`${theme === "dark" ? "text-main" : "text-lightfont"} rotatingMonk`}
               />
             </div>
 
@@ -72,17 +74,36 @@ const HireDev = () => {
           </div>       
         </div>
 
-        <div className="verticalC max-w-[600px] gap-5">
-          {/*the pitching*/}
+        {/*the pitching*/}
+        <div className="verticalC max-w-[600px] gap-5">          
           <BiSolidMessageDetail size={120} className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}/>
+
           <div className={`${theme === "dark" ? "terminaltap" : "rubbertap"} py-8 px-2 rounded-[15px] text-[16px] sm:text-[18px]`}>
-            <p className={`mb-3`}>
-              I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment.
-            </p>
-            <p>
-              I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it.
-            </p>
+
+            <div className={`mb-3 flex flex-col items-start`}>
+              <FaQuoteLeft  size={50} className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}/>
+              <span className="">I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment.
+              </span>
+            </div>
+
+            <div className={`mb-3 flex flex-col items-end`}>              
+              <span className="">I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it.
+              </span>
+              <FaQuoteRight  size={50} className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}/>
+            </div>
+
           </div>
+        </div>
+
+        {/*cta for connections*/}
+        <div className={`${theme === "dark" ? "bg-vsmain rounded-md" : "rubbertapRev rounded-[20px]"} p-5 verticalS`}>
+          <FaHandshake size={100} className={`border-b ${theme === "dark" ? "border-main" : "text-lightmain"} mb-5`}/>
+
+          <p className={`sm:text-lg`}>Whether I caught your interest or not, I’d still love to connect. Or just drop some feedback on my work, It would truly mean a lot and help me learn.</p>
+
+          <button className={`${theme === "dark" ? "bg-main text-vsmain" : "rubberbuttonRevJr"} p-2 px-6 my-5 rounded-[10px] sm:text-lg`}>
+            Let's Connect!
+          </button>
         </div>
         
       </div>     
