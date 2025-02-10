@@ -59,6 +59,11 @@ const Home = ({ stick }) => {
     }
   };
 
+  const toDevsSkill = () => {
+    navigate("devs-insight#bmcRef");
+    console.log("kire?");
+  };
+
   useEffect(() => {
     setAnimationKey((prev) => prev + 1);
   }, [theme]);
@@ -89,11 +94,6 @@ const Home = ({ stick }) => {
             alt=""
           />
         </div>
-        {/*
-        <div className="hero-trigger">
-          Hey! Looking for a fresh creative talented frontend developer who you
-          can trust? Great! You are in the right place! Scroll below mate...
-        </div>*/}
       </div>
 
       {/*PLACE HOLDER FOR HEADER*/}
@@ -240,10 +240,9 @@ const Home = ({ stick }) => {
 
               <button
                 className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+                onClick={toDevsSkill}
               >
-                <Link className="" to="/devs-insight">
-                  {">>"} More Insights {"<<"}
-                </Link>
+                {">>"} More Insights {"<<"}
               </button>
             </div>
           </div>
@@ -308,12 +307,12 @@ const Home = ({ stick }) => {
               below
             </span>
 
-            <Link
+            <button
               className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
-              to="/devs-insight"
+              onClick={toDevsSkill}
             >
               {">>"} More Insights {"<<"}
-            </Link>
+            </button>
           </div>
         </div>
 

@@ -4,16 +4,13 @@ import PageHeading from "../../components/PageHeading";
 import FaqTerminal from "./FaqTerminal";
 import FaqMarshmallow from "./FaqMarshmallow";
 
-// import { BsCardText } from "react-icons/bs";
-// import { FaUserTie } from "react-icons/fa6";
-// import { FaCertificate } from "react-icons/fa6";
-// import { BsGearWide } from "react-icons/bs";
-// import { FaAddressCard, FaCertificate } from "react-icons/fa6";
-// import { FaQuestionCircle } from "react-icons/fa";
-// import { MdConnectWithoutContact } from "react-icons/md";
-
 import { BiSolidMessageDetail } from "react-icons/bi";
-import { FaQuoteLeft, FaQuoteRight, FaAddressCard, FaCertificate } from "react-icons/fa6";
+import {
+  FaQuoteLeft,
+  FaQuoteRight,
+  FaAddressCard,
+  FaCertificate,
+} from "react-icons/fa6";
 import { FaHandshake, FaQuestionCircle } from "react-icons/fa";
 
 const HireDev = () => {

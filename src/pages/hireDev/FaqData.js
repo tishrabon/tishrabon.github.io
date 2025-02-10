@@ -5,7 +5,7 @@ export const FaqData = [
     getCmd: `exe q1`,
     label: `[Q1 ans]`,
     type: `qna`,
-    id: `1001`
+    id: `1001`,
   },
 
   {
@@ -15,7 +15,7 @@ export const FaqData = [
     getCmd: `exe q2`,
     label: `[Q2 ans]`,
     type: `qna`,
-    id: `1002`
+    id: `1002`,
   },
 
   {
@@ -25,7 +25,7 @@ export const FaqData = [
     getCmd: `exe q3`,
     label: `[Q3 ans]`,
     type: `qna`,
-    id: `1003`
+    id: `1003`,
   },
 
   {
@@ -35,7 +35,7 @@ export const FaqData = [
     getCmd: `exe q4`,
     label: `[Q4 ans]`,
     type: `qna`,
-    id: `1004`
+    id: `1004`,
   },
 
   {
@@ -45,7 +45,7 @@ export const FaqData = [
     getCmd: `exe q5`,
     label: `[Q5 ans]`,
     type: `qna`,
-    id: `1005`
+    id: `1005`,
   },
 
   {
@@ -55,7 +55,7 @@ export const FaqData = [
     getCmd: `exe q6`,
     label: `[Q6 ans]`,
     type: `qna`,
-    id: `1006`
+    id: `1006`,
   },
 
   {
@@ -65,45 +65,43 @@ export const FaqData = [
     getCmd: `exe q7`,
     label: `[Q7 ans]`,
     type: `qna`,
-    id: `1007`
+    id: `1007`,
   },
 
   {
     getCmd: `cls`,
     type: `clearStack`,
-    id: `1008`
+    id: `1008`,
   },
 
   {
     getCmd: `nav --insight`,
     type: `navinsight`,
-    id: `1008`
+    id: `1008`,
   },
 
   {
     getCmd: `switch --theme`,
     type: `switchtheme`,
-    id: `1009`
+    id: `1009`,
   },
 
   {
     getCmd: `break --tea`,
     type: `teabreak`,
-    id: `1010`
-  },  
+    id: `1010`,
+  },
 
   {
     getCmd: `op --alt`,
     type: `opal11`,
-    id: `1011`
-  },      
+    id: `1011`,
+  },
 
   {
     getCmd: `hey dev`,
     type: `heydev`,
     answer: `Good Morning! Hope you find what you are looking for! Other commands: 'nav --insight' -> direct to my insight page, 'switch --theme' -> toggle theme, 'break --tea' -> silly trivias, 'op --alt' -> if you hate this process`,
-    id: `1012` 
-  }, 
-
-
+    id: `1012`,
+  },
 ];

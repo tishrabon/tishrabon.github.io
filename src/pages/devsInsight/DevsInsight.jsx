@@ -1,5 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { themeContext } from "../../context/ThemeContext";
+import { useLocation } from "react-router-dom";
+
 import PageHeading from "../../components/PageHeading";
 import ChapterHead from "./ChapterHead";
 
@@ -38,8 +40,12 @@ import { PiHourglassSimpleLowFill } from "react-icons/pi";
 
 const DevsInsight = () => {
   const { theme } = useContext(themeContext);
+  const location = useLocation();
+
   const terminalHeading = `tishrabon:\\portfolio\\devsInsight.exe`;
   const marshmallowHeading = `Dev's Insight`;
+  const bmcRef = useRef(null);
+
   const bClass = `verticalS gap-5 w-full`;
   const pClass = `text-lg text-left px-2 sm:px-4`;
   const toolsBlock = `${theme === "dark" ? "bg-vsmain rounded-md" : "rubbertapRev rounded-[15px]"} verticalS gap-5 overflow-hidden`;
@@ -59,7 +65,7 @@ const DevsInsight = () => {
   };
 
   const chapterTwo = {
-    p1: `I come from a science background and am a self-taught programmer. I was majoring in Computer Science & Engineering at the University of Asia Pacific, Dhaka, Bangladesh, but paused my studies with the possibility of resuming in the future.`,
+    p1: `Honestly, I'm a fresher with zero experience. I come from a science background and am a self-taught programmer. I was majoring in Computer Science & Engineering at the University of Asia Pacific, Dhaka, Bangladesh, but paused my studies with the possibility of resuming in the future.`,
 
     p2: `I'm diving into frontend development for now, but since full-stack development is my ultimate goal and I love creating complete solutions, full-stack development is where I’m heading..`,
 
@@ -77,8 +83,18 @@ const DevsInsight = () => {
   };
 
   const chapterFour = {
-    p1: `It wasn’t my intention to make this so long. I honestly just wanted to express my potential. I hope you’ve gained some good insight about me. Hope to collaborate in the work!`,
+    p1: `It wasn’t my intention to make this so long. I honestly just wanted to share a bit about myself. I hope you’ve gained some good insight, and I’m looking forward to the possibility of collaborating!`,
   };
+
+  const scrollTo = (targetRef) => {
+    targetRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (location.hash === "#bmcRef") {
+      scrollTo(bmcRef);
+    }
+  }, [location]);
 
   return (
     <div className="otherpage-container verticalS text-center">
@@ -137,7 +153,7 @@ const DevsInsight = () => {
           </div>
 
           {/*CHAPTER TWO*/}
-          <div className={`${bClass}`}>
+          <div className={`${bClass}`} ref={bmcRef}>
             <ChapterHead
               TerminalIcon={BsTools}
               MarshIcon={BsTools}

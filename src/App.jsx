@@ -62,7 +62,7 @@ function App() {
 
           <Route path="/hire-dev" element={<HireDev />} />
 
-          <Route path="/lets-connect" element={<LetsConnect />} />
+          {/*<Route path="/lets-connect" element={<LetsConnect />} />*/}
 
           <Route path="*" element={<NotFound />} />
         </Routes>

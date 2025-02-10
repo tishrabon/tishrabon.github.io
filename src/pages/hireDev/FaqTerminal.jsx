@@ -1,6 +1,6 @@
 import React, { useState, useRef, useContext } from "react";
-import { useNavigate } from 'react-router-dom';
-import { themeContext } from '../../context/ThemeContext'
+import { useNavigate } from "react-router-dom";
+import { themeContext } from "../../context/ThemeContext";
 
 import { FaqData } from "./FaqData";
 import { TfiThought } from "react-icons/tfi";
@@ -25,54 +25,37 @@ const FaqTerminal = () => {
   const inputRef = useRef(null);
 
   // THE TERMINAL METHOD
-  const exeCommand = (cmd) => {    
+  const exeCommand = (cmd) => {
+    const found = FaqData.find((data) => data.getCmd === cmd);
 
-    const found = FaqData.find(data => data.getCmd === cmd);
-
-    if (found) {      
-
-      if (found.type === 'qna') {
+    if (found) {
+      if (found.type === "qna") {
         let qnaResult = found.label + " " + found.answer;
-        setStack([...stack, qnaResult]);        
-      }
-
-      else if (found.type === 'clearStack') {
+        setStack([...stack, qnaResult]);
+      } else if (found.type === "clearStack") {
         setStack([]);
-      }
-
-      else if (found.type === 'heydev') {
+      } else if (found.type === "heydev") {
         let knowMore = found.answer;
         setStack([...stack, knowMore]);
-      }
-
-      else if (found.type === 'navinsight') {
+      } else if (found.type === "navinsight") {
         navigate("/devs-insight");
-      }
-
-      else if (found.type === 'switchtheme') {
+      } else if (found.type === "switchtheme") {
         toggleTheme();
-      }
-
-      else if (found.type === 'opalt') {
+      } else if (found.type === "opalt") {
         let temp = `I'm sorry that you didn't like this process. How can I make it better? I would deeply appreciate your feedback! You can also switch to Marshmallow Mode—it's designed to be effortless and smooth.`;
         setStack([...stack, temp]);
-      }    
-
-      else if (found.type === 'teabreak') {
+      } else if (found.type === "teabreak") {
         let tempTea = `This is a fun goal made to bring a smile to your face. Not done yet, working on it...`;
         setStack([...stack, tempTea]);
-      }                    
-
-      else {
+      } else {
         setStack([...stack, "Sorry! Try again!"]);
       }
-    }
-    else {
-      setStack([...stack, "false command! false command!"])
+    } else {
+      setStack([...stack, "false command! false command!"]);
     }
 
     setInputs("");
-  }
+  };
 
   return (
     <div className={`verticalS mt-5 gap-10`}>
@@ -97,24 +80,27 @@ const FaqTerminal = () => {
 
       {/*QUESTION LISTS/COMMANDS*/}
       <div className={`verticalS gap-5`}>
-        {FaqData.map((qna, index) => (
-          qna.type === 'qna' && (
-            <div key={qna.id} className={`terminalbutton rounded-md p-2`}>
-              <p>
-                {index + 1}. {qna.question}{" "}
-                <span className="whitespace-nowrap rounded-sm bg-vsmain px-2">
-                  {qna.getCmd}
-                </span>
-              </p>
-            </div>
-          )
-        ))}
+        {FaqData.map(
+          (qna, index) =>
+            qna.type === "qna" && (
+              <div key={qna.id} className={`terminalbutton rounded-md p-2`}>
+                <p>
+                  {index + 1}. {qna.question}{" "}
+                  <span className="whitespace-nowrap rounded-sm bg-vsmain px-2">
+                    {qna.getCmd}
+                  </span>
+                </p>
+              </div>
+            ),
+        )}
       </div>
 
       {/*THE TERMINAL*/}
       <div
         className={`w-full max-w-[700px] overflow-hidden rounded-[5px] bg-vsmain text-left`}
-        onClick={() => {inputRef.current.focus()}}
+        onClick={() => {
+          inputRef.current.focus();
+        }}
       >
         <div
           className={`horizontalS gap-1 bg-main p-2 text-[13px] text-vsmain`}
@@ -124,46 +110,46 @@ const FaqTerminal = () => {
         </div>
 
         <div className={`h-[50vh] overflow-y-auto px-1 py-2 text-[15px]`}>
-          <div className={`flex justify-start items-start gap-1`}>
+          <div className={`flex items-start justify-start gap-1`}>
             <span>{"> "}</span>
             <div>
-              <span>{" run "}</span>            
+              <span>{" run "}</span>
               <span className="whitespace-nowrap rounded-sm bg-gray-700 px-1">
                 cls
               </span>
-              <span>{" to clear output & "}</span>  
+              <span>{" to clear output & "}</span>
               <span className="whitespace-nowrap rounded-sm bg-gray-700 px-1">
                 hey dev
               </span>
-              <span>{" to know more"}</span>                            
-            </div>          
+              <span>{" to know more"}</span>
+            </div>
           </div>
 
           {/*TERMINAL DISPLAY/output*/}
           <div className={`${stack.length !== 0 ? "" : "hidden"}`}>
-            <div className={`flex flex-col justify-start items-start`}>
+            <div className={`flex flex-col items-start justify-start`}>
               {stack.map((output, index) => (
                 <div key={index} className={`horizontalUp gap-1`}>
-                  <p className="">{">"}</p>  
-                  <div className="">{output}</div>                
+                  <p className="">{">"}</p>
+                  <div className="">{output}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/*INPUT SECTION*/}
-          <div 
-            className={`flex flex-row justify-start items-start gap-1`}            
-          >      
+          <div className={`flex flex-row items-start justify-start gap-1`}>
             <span>{">"}</span>
-            <input type="text" ref={inputRef}
-              className={`border-none bg-transparent p-0 outline-none text-inherit`}
-              style={{ width: `${Math.max(inputs.length, 1)}ch`}}
+            <input
+              type="text"
+              ref={inputRef}
+              className={`border-none bg-transparent p-0 text-inherit outline-none`}
+              style={{ width: `${Math.max(inputs.length, 1)}ch` }}
               value={inputs}
-              onChange={e => setInputs(e.target.value)}
-              onKeyDown={e => {
-                if (e.key === 'Enter' && inputs.trim() !== "") {                
-                  exeCommand(inputs);                
+              onChange={(e) => setInputs(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && inputs.trim() !== "") {
+                  exeCommand(inputs);
                 }
               }}
             />
@@ -172,11 +158,14 @@ const FaqTerminal = () => {
         </div>
       </div>
 
-      <div className={`max-w-[700px] verticalS gap-3 text-sm`}>
+      <div className={`verticalS max-w-[700px] gap-3 text-sm`}>
+        <HiLightBulb size={30} className="" />
 
-      <HiLightBulb size={30} className="" />
-
-      <p>If you are not comfortable with this process then you can switch theme to Marshmallow, it's designed to be effortless and smooth. (Click the left button in the header to switch theme)</p>        
+        <p>
+          If you are not comfortable with this process then you can switch theme
+          to Marshmallow, it's designed to be effortless and smooth. (Click the
+          left button in the header to switch theme)
+        </p>
       </div>
     </div>
   );

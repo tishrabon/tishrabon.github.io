@@ -102,7 +102,10 @@ const Header = ({ stick }) => {
 
       <div
         className={`h-auto w-[72px] cursor-pointer sm:w-20`}
-        onClick={() => navigate("/")}
+        // onClick={() => navigate("/")}
+        onClick={() => {
+          window.location.href = "/";
+        }}
       >
         <img
           className={`object-fit h-full w-full object-cover`}

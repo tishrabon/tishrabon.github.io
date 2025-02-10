@@ -32,8 +32,6 @@ I’ve also put together some FAQs in the last section, covering questions you m
 
 "here is the list of questions. With each question is attached with a specific command, if you want the answer then you need to give the specific command in terminal below and you will have the answer. If you are not comfortable with this process then you can switch theme to Marshmallow. (toggle theme button is the left button in the header)"
 
-
-
 If you are not comfortable with this process then you can switch theme to Marshmallow. (Click the left button in the header to switch theme)
 
 Click the left button in the header to switch theme
