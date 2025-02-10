@@ -11,7 +11,7 @@ import {
 import { FaChevronDown } from "react-icons/fa";
 import { BiSolidTerminal } from "react-icons/bi";
 import { TbPointFilled } from "react-icons/tb";
-import { LuMousePointerClick } from "react-icons/lu";
+import { HiLightBulb } from "react-icons/hi";
 
 const FaqTerminal = () => {
   const demo = `[ans to q1] I approach app development from multiple perspectives. I think about how users' needs evolve over time, what they want now, how they’ve changed, how they’ll change in the future, Whether it’s a long-term or short-term project, I might keep users' expectations low with high satisfaction, so that later I can drop an exclusive feature that will blow their minds. This kind of vision shapes both my design and programming work. I'm not just a programmer. I'm a package of solid coding skills and long-term vision with a strategic mindset`;
@@ -25,13 +25,11 @@ const FaqTerminal = () => {
   const inputRef = useRef(null);
 
   // THE TERMINAL METHOD
-  const exeCommand = (cmd) => {
-    console.log(cmd, "dispatched! yall!");
+  const exeCommand = (cmd) => {    
 
     const found = FaqData.find(data => data.getCmd === cmd);
 
-    if (found) {
-      console.log(found);
+    if (found) {      
 
       if (found.type === 'qna') {
         let qnaResult = found.label + " " + found.answer;
@@ -70,7 +68,7 @@ const FaqTerminal = () => {
       }
     }
     else {
-      setStack([...stack, "false command! false command! false command!"])
+      setStack([...stack, "false command! false command!"])
     }
 
     setInputs("");
@@ -101,9 +99,9 @@ const FaqTerminal = () => {
       <div className={`verticalS gap-5`}>
         {FaqData.map((qna, index) => (
           qna.type === 'qna' && (
-            <div key={qna.getCmd} className={`terminaltap rounded-md p-2`}>
+            <div key={qna.id} className={`terminalbutton rounded-md p-2`}>
               <p>
-                {index + 1} {qna.question}{" "}
+                {index + 1}. {qna.question}{" "}
                 <span className="whitespace-nowrap rounded-sm bg-vsmain px-2">
                   {qna.getCmd}
                 </span>
@@ -176,9 +174,9 @@ const FaqTerminal = () => {
 
       <div className={`max-w-[700px] verticalS gap-3 text-sm`}>
 
-      <LuMousePointerClick size={30} className="text-vsmain" />
+      <HiLightBulb size={30} className="" />
 
-      <p>If you are not comfortable with this process then you can switch theme to Marshmallow. (Click the left button in the header to switch theme)</p>        
+      <p>If you are not comfortable with this process then you can switch theme to Marshmallow, it's designed to be effortless and smooth. (Click the left button in the header to switch theme)</p>        
       </div>
     </div>
   );

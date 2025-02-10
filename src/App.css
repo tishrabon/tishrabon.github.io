@@ -154,6 +154,7 @@
 
 .terminalbutton {
   box-shadow: 0 0 8px 0 #1c1c1c;
+  cursor: pointer;
   transition:
     transform 0.3s,
     border-radius 0.3s;
@@ -208,6 +209,7 @@
 
 .rubberbutton {
   box-shadow: 0 0 8px 0 #cccccc;
+  cursor: pointer;
   transition:
     transform 0.3s,
     border-radius 0.3s;
