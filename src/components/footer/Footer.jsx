@@ -1,7 +1,141 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from 'react';
+import { themeContext } from '../../context/ThemeContext';
+import { RiUserAddFill, RiGlobalFill } from "react-icons/ri";
+import { MdOutlineConnectWithoutContact } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter, FaSquareGithub } from "react-icons/fa6";
 
-const Footer = () => {
-  return <div>dev/tishrabon - footer</div>;
+import { MdEmail } from "react-icons/md";
+import { CgHello } from "react-icons/cg";
+
+import { FaEarthAsia } from "react-icons/fa6";
+import { RxGlobe } from "react-icons/rx";
+import { HiGlobeAlt } from "react-icons/hi2";
+import { BsGlobe } from "react-icons/bs";
+
+
+
+
+const Footer = () => {  
+const { theme } = useContext(themeContext);
+
+  return (
+    <div className={`${theme === "dark" ? "" : ""} relative w-full rounded-tl-[16px] rounded-tr-[16px] max-w-[800px] p-10 verticalS h-[200vh] overflow-hidden`}      
+      id="footer"
+    >      
+      {/*<img src="tishrabon-frost-original.svg" alt="" className="rotatingMonkz" />*/}
+
+      <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
+        <BsGlobe className={`h-[100vh] w-[100vh] rotatingSloth`} />
+      </div> 
+
+      <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
+        <BsGlobe className={`h-[100vh] w-[100vh] rotatingSloth`} />
+      </div>            
+
+      {/*MAIN CONTAINER*/}
+      <div className={`${theme === "dark" ? "bg-darknavbg text-lightmain" : "bg-lightnavbg text-lightfont"} frostglassFooter absolute inset-0 verticalS rounded-tl-[16px] rounded-tr-[16px] p-5 gap-5 text-center h-[200vh]`}> 
+
+        <CgHello size={80} className={`text-lightmain mt-10`}/>       
+
+        <p className={`text-[18px] sm:text-xl`}>
+          Maybe you’re not looking to collaborate right now, but who knows
+          about the future? Let’s stay connected, just in case our paths
+          align down the road in the future...
+        </p>  
+
+        <BsGlobe size={80} className={`text-lightmain rotatingMonk`}/> 
+
+        <p className={`text-[30px]`}>
+          Let's Connect!
+        </p>
+
+        <div className={`verticalS gap-5`}>
+          {/*EMAIL*/}
+          <div
+            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+          >
+            <p>Email Me</p>
+            <MdEmail size={50} />
+            <p className="text-sm sm:text-base">
+              tishrabon.official@gmail.com
+            </p>
+          </div>   
+
+          {/*LINKEDIN*/}
+          <div
+            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+          >
+            <p>Let's Connect On</p>
+            <a
+              className={`flex flex-col items-center gap-1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/tishrabon/"
+            >
+              <FaLinkedin size={50} />
+              <span className="text-sm">linkedin.com/in/tishrabon</span>
+            </a>
+          </div>
+
+          {/*GITHUB*/}
+          <div
+            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+          >
+            <p>{`< code & stuffs />`}</p>
+            <a
+              className={`flex flex-col items-center gap-1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/tishrabon"
+            >
+              <FaSquareGithub size={50} />
+              <span className="text-sm">@tishrabon</span>
+            </a>
+          </div>
+
+
+          {/*X*/}
+          <div
+            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+          >
+            <p>Find Me On</p>
+            <a
+              className={`flex flex-col items-center gap-1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/tishrabon"
+            >
+              <FaSquareXTwitter size={50} />
+              <span className="text-sm">@tishrabon</span>
+            </a>
+          </div>                           
+
+
+
+          {/*reserve*/}
+{/*          <div
+            className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+          >
+            <p>Find Me On</p>
+            <a
+              className={`flex flex-col items-center gap-1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/tishrabon"
+            >
+              <FaSquareXTwitter size={50} />
+              <span className="text-xs sm:text-sm">@tishrabon</span>
+            </a>
+          </div>                           
+*/}
+
+        </div>
+    
+      </div>
+
+    </div>
+  );
 };
 
 export default Footer;

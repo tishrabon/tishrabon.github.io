@@ -140,6 +140,20 @@
   }
 }
 
+.rotatingSloth {
+  animation: rotatingMonk 160s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rotatingSloth {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 /*PHASE TWO EXODUS*/
 
 /*TERMINAL TAP STARTS HERE*/
@@ -205,6 +219,10 @@
 
 .rubbertap2 {
   box-shadow: 0 0 5px 0 #bbbbbb;
+}
+
+.rubbertapDark {
+  box-shadow: inset 0 0 6px 0 #9c9c9c;
 }
 
 .rubberbutton {

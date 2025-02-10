@@ -178,3 +178,8 @@ body {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
+
+.frostglassFooter {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(12px);
+}

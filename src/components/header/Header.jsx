@@ -19,6 +19,10 @@ const Header = ({ stick }) => {
   const navMenuButtonRef = useRef(null);
   const [navpass, setNavpass] = useState(false);
 
+  const scrollToFooter = () => {
+    document.getElementById("footer").scrollIntoView({behavior: 'smooth'});
+  }
+
   // navlinks/tishrabon
   const navs = [
     {
@@ -41,11 +45,11 @@ const Header = ({ stick }) => {
       linkNameD: "> hireDev.exe",
       linkNameL: "Hire Dev!",
     },
-    {
-      address: "/lets-connect",
-      linkNameD: "> let's connect",
-      linkNameL: "Let's Connect!",
-    },
+    // {
+    //   address: "/lets-connect",
+    //   linkNameD: "> let's connect",
+    //   linkNameL: "Let's Connect!",
+    // },
   ];
 
   const toggleNav = () => {
@@ -170,8 +174,19 @@ const Header = ({ stick }) => {
                 >
                   {theme === "dark" ? link.linkNameD : link.linkNameL}
                 </NavLink>
-              </li>
+              </li>        
             ))}
+
+            <button 
+              className={`${navpass ? "show-nav" : ""} ${theme === "dark" ? "bg-mainbb text-vsmain" : "bg-vslight text-lightfont"} navLinks rounded-md border-none p-2 text-left`}
+              style={{ transitionDelay: `${navs.length + 1 * 100}ms` }}
+              onClick={() => {
+                scrollToFooter();
+                setNavpass((prev) => !prev);                
+              }}
+            >
+              {theme === "dark" ? "> let's connect!" : "Let's Connect!"}
+            </button>
           </ul>
         </nav>
       </div>

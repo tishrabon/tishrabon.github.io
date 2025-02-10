@@ -59,6 +59,11 @@ const Home = ({ stick }) => {
     }
   };
 
+  const toDevsSkill = () => {
+    navigate("devs-insight#bmcRef");
+    console.log("kire?");
+  };
+
   useEffect(() => {
     setAnimationKey((prev) => prev + 1);
   }, [theme]);
@@ -149,7 +154,6 @@ const Home = ({ stick }) => {
                     </div>
                     <div onClick={() => terminalInputRef.current.focus()}>
                       {"> "}
-
                       <input
                         ref={terminalInputRef}
                         className={`border-none bg-transparent p-0 text-inherit outline-none`}
@@ -163,7 +167,6 @@ const Home = ({ stick }) => {
                           }
                         }}
                       />
-
                       <span className="jumpUnderscore">{"_"}</span>
                     </div>
                   </div>
@@ -237,10 +240,9 @@ const Home = ({ stick }) => {
 
               <button
                 className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
+                onClick={toDevsSkill}
               >
-                <Link className="" to="/devs-insight">
-                  {">>"} More Insights {"<<"}
-                </Link>
+                {">>"} More Insights {"<<"}
               </button>
             </div>
           </div>
@@ -305,12 +307,12 @@ const Home = ({ stick }) => {
               below
             </span>
 
-            <Link
+            <button
               className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
-              to="/devs-insight"
+              onClick={toDevsSkill}
             >
               {">>"} More Insights {"<<"}
-            </Link>
+            </button>
           </div>
         </div>
 
