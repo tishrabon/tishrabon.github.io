@@ -18,9 +18,6 @@ const HireDev = () => {
   const marshmallowHeading = `Hire Dev`;
   const { theme } = useContext(themeContext);
 
-  const pitching =
-    "I'm a fresher & this is my 2nd project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so that it can fit into even more paradigms, and I’ll do even better when I have the opportunity to grow in a real work environment. I'm starting as a frontend dev with plans to evolve into a full-stack dev because I’m passionate about coding and building a career around it. I’ve also put together some FAQs, covering questions you might have, feel free to check them out.";
-
   return (
     <div className="otherpage-container verticalS gap-10 text-center">
       <PageHeading
@@ -132,6 +129,9 @@ const HireDev = () => {
 
           <button
             className={`${theme === "dark" ? "bg-main text-vsmain" : "rubberbuttonRevJr"} my-5 rounded-[10px] p-2 px-6 sm:text-lg`}
+            onClick={() => {
+              document.getElementById("footer").scrollIntoView({behavior: 'smooth'});
+            }}
           >
             Let's Connect!
           </button>

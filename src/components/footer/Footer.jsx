@@ -16,23 +16,22 @@ import { BsGlobe } from "react-icons/bs";
 
 
 
-
 const Footer = () => {  
 const { theme } = useContext(themeContext);
 
   return (
-    <div className={`${theme === "dark" ? "" : ""} relative w-full rounded-tl-[16px] rounded-tr-[16px] max-w-[800px] p-10 verticalS h-[1400px] overflow-hidden`}      
+    <div className={`${theme === "dark" ? "" : ""} relative w-full rounded-tl-[30px] rounded-tr-[30px] max-w-[1000px] p-10 verticalS h-[1400px] overflow-hidden`}      
       id="footer"
     >      
       {/*<img src="tishrabon-frost-original.svg" alt="" className="rotatingMonkz" />*/}
 
-      <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
-        <BsGlobe className={`h-[100vh] w-[100vh] rotatingSloth`} />
+      <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0 mt-[50px]`}>
+        <BsGlobe className={`h-[1300px] w-[1300px] rotatingSloth`} />
       </div> 
 
-      <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
+ {/*     <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
         <BsGlobe className={`h-[100vh] w-[100vh] rotatingSloth`} />
-      </div>            
+      </div> */}           
 
       {/*MAIN CONTAINER*/}
       <div className={`${theme === "dark" ? "bg-darknavbg text-lightmain" : "bg-lightnavbg text-lightfont"} frostglassFooter absolute inset-0 verticalS rounded-tl-[16px] rounded-tr-[16px] p-5 gap-5 text-center`}> 
@@ -54,7 +53,7 @@ const { theme } = useContext(themeContext);
         <div className={`verticalS gap-10`}>
           {/*EMAIL*/}
           <div
-            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+            className={`${theme === "dark" ? "terminalbutton" : "rubberbutton2"} verticalC w-full rounded-md p-4`}
           >
             <p>Email Me</p>
             <MdEmail size={50} />
@@ -65,7 +64,7 @@ const { theme } = useContext(themeContext);
 
           {/*LINKEDIN*/}
           <div
-            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+            className={`${theme === "dark" ? "terminalbutton" : "rubberbutton2"} verticalC w-full rounded-md p-4`}
           >
             <p>Let's Connect On</p>
             <a
@@ -81,7 +80,7 @@ const { theme } = useContext(themeContext);
 
           {/*GITHUB*/}
           <div
-            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+            className={`${theme === "dark" ? "terminalbutton" : "rubberbutton2"} verticalC w-full rounded-md p-4`}
           >
             <p>{`< code & stuffs />`}</p>
             <a
@@ -98,7 +97,7 @@ const { theme } = useContext(themeContext);
 
           {/*X*/}
           <div
-            className={`${theme === "dark" ? "terminaltap" : "rubbertapDark"} verticalC w-full rounded-md p-4`}
+            className={`${theme === "dark" ? "terminalbutton" : "rubberbutton2"} verticalC w-full rounded-md p-4`}
           >
             <p>Find Me On</p>
             <a
@@ -110,7 +109,7 @@ const { theme } = useContext(themeContext);
               <FaSquareXTwitter size={50} />
               <span className="text-sm">@tishrabon</span>
             </a>
-          </div>
+          </div>        
                     
         </div>
 

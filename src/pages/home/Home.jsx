@@ -70,7 +70,7 @@ const Home = ({ stick }) => {
 
   return (
     <div
-      className={`homepage-container verticalS min-gap-y-5 mb-[500px] text-center`}
+      className={`homepage-container verticalS min-gap-y-5 text-center`}
       style={{
         marginTop: stick ? "-30px" : "0",
         transition: "margin-top 1s ease",
@@ -130,7 +130,7 @@ const Home = ({ stick }) => {
                   </span>{" "}
                   <span>{`tishrabon:\\bio\\terminal.exe`}</span>
                 </div>
-                <div className="flex flex-col items-start justify-start p-2">
+                <div className="flex flex-col items-start justify-start p-2 text-lg">
                   <p>
                     {" "}
                     {`>`} {intro101}{" "}
@@ -231,7 +231,7 @@ const Home = ({ stick }) => {
 
             {/*CTA/skills sm:breakpoint*/}
             <div
-              className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} hidden flex-col items-center justify-start gap-5 p-10 text-lg sm:flex`}
+              className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} hidden flex-col items-center justify-start gap-5 py-5 px-2 text-lg sm:flex`}
             >
               <span>
                 For detailed insights into my skills and tools, Click the button
@@ -300,7 +300,7 @@ const Home = ({ stick }) => {
 
           {/*CTA/skills phone:breakpoints*/}
           <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex flex-col items-center justify-start gap-5 p-10 text-lg sm:hidden`}
+            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex flex-col items-center justify-start gap-5 py-5 px-2 sm:hidden`}
           >
             <span>
               For detailed insights into my skills and tools, Click the button
@@ -336,7 +336,7 @@ const Home = ({ stick }) => {
           </div>
           {/*WORDS*/}
           <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 p-10 text-base sm:text-lg`}
+            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 py-5 px-2 text-base sm:text-lg`}
           >
             <span>
               You're currently browsing my second project, this portfolio. Since
@@ -353,7 +353,7 @@ const Home = ({ stick }) => {
             </Link>
 
             <span
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} rounded-md p-2`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} rounded-md p-2 mx-2`}
             >
               More unique and refined projects are on the way as I'm already
               working on the next one...
@@ -384,7 +384,7 @@ const Home = ({ stick }) => {
 
           {/*WORDS*/}
           <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 p-10 text-base sm:text-lg`}
+            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 py-5 px-2 text-base sm:text-lg`}
           >
             <span>
               Let’s be real... Why would you hire a fresher like me? Hopefully,
@@ -402,81 +402,6 @@ const Home = ({ stick }) => {
           </div>
         </div>
 
-        {/* LETS CONNECT */}
-
-        <div className="flex h-full w-full flex-col items-center justify-center gap-10 p-5">
-          {/*CAPS*/}
-          <div
-            className={`verticalC h-full w-full gap-5 ${theme === "dark" ? "rounded-md bg-vsmain" : "rubbertapRev rounded-[20px]"} p-10`}
-          >
-            <div className={`flex w-full items-center justify-center gap-5`}>
-              {/*<RiUserAddFill size={100} />{" "}*/}
-              <AiOutlineGlobal className="rotating360" size={100} />
-            </div>
-
-            <p
-              className={`${theme === "dark" ? "border-main" : ""} verticalC border-b pb-6 text-center text-xl`}
-            >
-              Let's Connect!
-              <IoMdArrowDown />
-              {/*<FiArrowRight className="hidden sm:inline" />*/}
-            </p>
-          </div>
-
-          {/*WORDS*/}
-          <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 p-10 text-base sm:text-lg`}
-          >
-            <p>
-              Maybe you’re not looking to collaborate right now, but who knows
-              about the future? Let’s stay connected, just in case our paths
-              align down the road in the future...
-            </p>
-
-            <div></div>
-
-            <div
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertapRevJr"} verticalC w-full rounded-md p-4`}
-            >
-              <p>Let's Connect On</p>
-              <a
-                className={`flex items-end gap-1`}
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/tishrabon/"
-              >
-                <FaLinkedin size={50} />
-                <span className="text-xs sm:text-sm">/in/tishrabon</span>
-              </a>
-            </div>
-
-            <div
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertapRevJr"} verticalC w-full rounded-md p-4`}
-            >
-              <p>Email Me</p>
-              <MdEmail size={50} />
-              <p className="text-sm sm:text-base">
-                tishrabon.official@gmail.com
-              </p>
-            </div>
-
-            <div className="verticalC my-5 gap-1">
-              <p className="text-2xl">That's not all..</p>
-              <p>
-                If you want to check out more of my social links, click the
-                button below
-              </p>
-              <IoMdArrowDown />
-            </div>
-
-            <Link
-              className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
-              to="/lets-connect"
-            >
-              {">>"} Connect Further {"<<"}
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

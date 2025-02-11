@@ -18,6 +18,7 @@ const Header = ({ stick }) => {
   const navMenuRef = useRef(null);
   const navMenuButtonRef = useRef(null);
   const [navpass, setNavpass] = useState(false);
+  const [time, setTime] = useState("");
 
   const scrollToFooter = () => {
     document.getElementById("footer").scrollIntoView({behavior: 'smooth'});
@@ -35,21 +36,12 @@ const Header = ({ stick }) => {
       linkNameD: "> portfolio",
       linkNameL: "Portfolio",
     },
-    // {
-    //   address: "/side-skills",
-    //   linkNameD: "> side-skills",
-    //   linkNameL: "Side-Skills",
-    // },
+
     {
       address: "/hire-dev",
-      linkNameD: "> hireDev.exe",
-      linkNameL: "Hire Dev!",
+      linkNameD: "> hireDev/FAQs",
+      linkNameL: "Hire Dev / FAQs",
     },
-    // {
-    //   address: "/lets-connect",
-    //   linkNameD: "> let's connect",
-    //   linkNameL: "Let's Connect!",
-    // },
   ];
 
   const toggleNav = () => {
@@ -80,6 +72,27 @@ const Header = ({ stick }) => {
 
     return () => document.removeEventListener("mousedown", handleNav);
   }, [navpass]);
+
+  // for time
+  useEffect(() => {
+    const updateTime = () => {
+      const bdTime = new Date().toLocaleString('en-US', {
+        timeZone: "Asia/Dhaka",
+        hour: "2-digit",
+        minute: "2-digit",
+        // second: "2-digit",
+        hour12: false,
+      });
+
+      setTime(bdTime);
+    }
+
+    const exeTime = setInterval(updateTime, 60000);
+
+    updateTime();
+
+    return () => clearInterval(exeTime);
+  }, [])
 
   return (
     <div
@@ -143,22 +156,22 @@ const Header = ({ stick }) => {
               className={`${navpass ? "show-nav" : ""} navLinks ${theme === "dark" ? "text-[13px] text-main" : "text-[14px] text-lightfont2"} w-full text-left`}
             >
               {theme === "dark"
-                ? `c:\\current\\theme> terminal_`
+                ? `os:\\current\\theme> terminal_`
                 : `Current Theme: Marshmallow`}
             </p>
             <p
               className={`${navpass ? "show-nav" : ""} navLinks ${theme === "dark" ? "text-[13px] text-main" : "text-[14px] text-lightfont2"} text-left`}
             >
               {theme === "dark"
-                ? `devs:\\now\\localTime> 23:49`
-                : `Local time: 23:42`}
+                ? `devs:\\localTime\\dhaka> ${time}`
+                : `Time in Dhaka: ${time}`}
             </p>
             <p
               className={`${navpass ? "show-nav" : ""} navLinks ${theme === "dark" ? "text-[13px] text-main" : "text-[14px] text-lightfont2"} mb-1 text-left`}
             >
               {theme === "dark"
                 ? `devs:\\now\\status> working on upcoming projects...`
-                : `Dev's Status: Working on upcoming projects...`}
+                : `Dev's Current Status: Working on upcoming projects...`}
             </p>
 
             {navs.map((link, index) => (
@@ -179,7 +192,7 @@ const Header = ({ stick }) => {
 
             <button 
               className={`${navpass ? "show-nav" : ""} ${theme === "dark" ? "bg-mainbb text-vsmain" : "bg-vslight text-lightfont"} navLinks rounded-md border-none p-2 text-left`}
-              style={{ transitionDelay: `${navs.length + 1 * 100}ms` }}
+              style={{ transitionDelay: `${navs.length + 2 * 100}ms` }}
               onClick={() => {
                 scrollToFooter();
                 setNavpass((prev) => !prev);                
