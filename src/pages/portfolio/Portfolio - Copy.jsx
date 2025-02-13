@@ -119,7 +119,7 @@ const Portfolio = () => {
 
       {/*side skills*/}
       <div
-        className={`${theme === "dark" ? "border-b border-main" : "border-b"} verticalS mb-14 w-full max-w-[800px] gap-10 px-5 pb-14`}
+        className={`${theme === "dark" ? "" : ""} verticalS mb-14 w-full max-w-[800px] gap-10 px-5 pb-14`}
       >
         {/*ORIGINAL banner icon and intro*/}
         <div className="verticalS gap-5">
@@ -211,9 +211,6 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-
-        {/*blogspot*/}
-        <div></div>
       </div>
     </div>
   );

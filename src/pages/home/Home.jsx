@@ -1,5 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { themeContext } from "../../context/ThemeContext";
+import TypingEffect from '../../components/TypingEffect';
+import TeaserTyping from '../../components/TeaserTyping';
 import { useNavigate, Link } from "react-router-dom";
 
 import darkmotion1 from "/tishrabon-original-codeface.svg";
@@ -47,6 +49,11 @@ const Home = ({ stick }) => {
 
   const intro101 =
     "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
+  const teaser = [
+    "Looking for a Frontend Dev? Your search ends here.",
+    "Lets make it happen.",
+    "Lets Make it epic."
+  ]    
 
   const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
 
@@ -94,6 +101,20 @@ const Home = ({ stick }) => {
             alt=""
           />
         </div>
+
+{/*        <div>
+          {teaser.map((item, index) => (
+            <div key={"type" + index}>
+              <TypingEffect text={item} />
+            </div>            
+          ))}
+        </div>*/}
+
+        <div>
+          {/*<TeaserTyping texts={teaser} />*/}
+        </div>
+
+        <p>Kire?</p>
       </div>
 
       {/*PLACE HOLDER FOR HEADER*/}
@@ -130,7 +151,7 @@ const Home = ({ stick }) => {
                   </span>{" "}
                   <span>{`tishrabon:\\bio\\terminal.exe`}</span>
                 </div>
-                <div className="flex flex-col items-start justify-start p-2 text-lg">
+                <div className="flex flex-col items-start justify-start p-2 text-[16px]">
                   <p>
                     {" "}
                     {`>`} {intro101}{" "}
@@ -191,7 +212,7 @@ const Home = ({ stick }) => {
 
               {/*BIO*/}
 
-              <div className="rubbertapRev mb-6 rounded-3xl bg-vslight p-7 text-lg">
+              <div className="rubbertapRev mb-6 rounded-3xl bg-vslight py-5 px-2 text-lg">
                 <p>{intro101}</p>
               </div>
 
