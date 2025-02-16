@@ -36,12 +36,16 @@ import { MdVerified, MdEmail } from "react-icons/md";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
+import { IoTv, IoTvOutline } from "react-icons/io5";
+
+
 const Home = ({ stick }) => {
   const { theme } = useContext(themeContext);
   const navigate = useNavigate();
   const terminalInputRef = useRef(null);
 
   const [animationKey, setAnimationKey] = useState(0);
+  const [typingKey, setTypingKey] = useState(0);
   const [falseCmd, setFalseCmd] = useState(false);
   const [falseCmdCounts, setFalseCmdCounts] = useState(0);
   const [navInsight, setNavInsight] = useState("");
@@ -49,13 +53,38 @@ const Home = ({ stick }) => {
 
   const intro101 =
     "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
-  const teaser = [
-    "Looking for a Frontend Dev? Your search ends here.",
-    "Lets make it happen.",
-    "Lets Make it epic."
-  ]    
 
   const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
+
+  // hero/typewriter/teaser
+  const teaser = [
+    "> Looking for a Frontend Dev? Your search ends here.",
+    "> Lets make it happen.",
+    "> Lets Make it epic"
+  ];
+
+  const [lines, setLines] = useState(Array(teaser.length).fill(''));
+  const [currentLine, setCurrentLine] = useState(0);
+  const [currentCh, setCurrentCh] = useState(0);
+
+  useEffect(() => {
+    if (currentLine >= teaser.length) return;
+    const timeout = setTimeout(() => {
+      if (currentCh < teaser[currentLine].length) {
+        setLines(prev => {
+          const newLines = [...prev];
+          newLines[currentLine] = teaser[currentLine].substring(0, currentCh + 1);
+          return newLines;
+        });
+        setCurrentCh(prev => prev + 1)
+      }      
+      else {        
+        setCurrentLine(prev => prev + 1);  
+        setCurrentCh(0);      
+      }
+    }, 20);
+    return () => clearTimeout(timeout);
+  }, [currentCh, currentLine]);
 
   const toDevsInsight = () => {
     if (navInsight === "nav --insight") {
@@ -73,7 +102,14 @@ const Home = ({ stick }) => {
 
   useEffect(() => {
     setAnimationKey((prev) => prev + 1);
+    setTypingKey(prev => prev + 1);
   }, [theme]);
+
+  useEffect(() => {
+    setLines(Array(teaser.length).fill('')); 
+    setCurrentLine(0); 
+    setCurrentCh(0); 
+  }, [typingKey]);
 
   return (
     <div
@@ -86,8 +122,8 @@ const Home = ({ stick }) => {
       {/*LOGO ANIMATION / HERO */}
       <div
         className="hero-section verticalS mb-[200px] h-[100vh] rounded-md border-none"
-        key={animationKey}
       >
+        {/*logo part*/}
         <div className="verticalC relative h-[250px] w-[300px]">
           <img
             className={`${theme === "dark" ? "darkshadow" : "lightshadow"} logo-part right rounded-[11px]`}
@@ -102,20 +138,38 @@ const Home = ({ stick }) => {
           />
         </div>
 
-{/*        <div>
-          {teaser.map((item, index) => (
-            <div key={"type" + index}>
-              <TypingEffect text={item} />
-            </div>            
-          ))}
-        </div>*/}
+        {/*teaser word part*/}
+        <div className="relative my-10">
 
-        <div>
-          {/*<TeaserTyping texts={teaser} />*/}
+          <div  className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"} absolute inset-0 flex justify-center items-center`}>
+            {theme === 'dark' ? <IoTv className="w-[300px] h-[300px]"/> : <IoTvOutline className="w-[300px] h-[300px]"/>}
+            
+            
+          </div>
+
+
+          <div key={typingKey} className={`${theme === "dark" ? "" : "text-lightfont"} relative max-w-[75%] left-[42px] top-[-20px] z-[10] flex justify-start items-end h-[150px] w-[330px]`}>
+            <div>
+              {lines && lines.length <= teaser.length && lines.map((line, index) => (
+                <div key={index} className={`p-1 text-[16px] text-left`}>
+                  {line} 
+                  {(index === lines.filter(l => l).length - 1) && <span className="jumpUnderscore">{theme === 'dark' ? "_" : "|"}</span>}           
+               
+                </div>
+              ))}            
+            </div>
+            {/*<span className={`jumpUnderscore`}>_</span>          */}
+          </div>          
+
         </div>
 
-        <p>Kire?</p>
+        {/*typing effect teaser*/}
+
+
+
+
       </div>
+    
 
       {/*PLACE HOLDER FOR HEADER*/}
       <div

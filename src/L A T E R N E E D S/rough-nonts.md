@@ -1,45 +1,139 @@
-// CustomHelmet.jsx
-import React from 'react';
-import { Helmet } from 'react-helmet';
+"Bringing Designs to Life. Delivering Excellence. Ending Your Search."
 
-const CustomHelmet = ({ title, description, robotsContent }) => {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {robotsContent && <meta name="robots" content={robotsContent} />}
-    </Helmet>
-  );
+
+"Looking for a Frontend Developer? Your search ends here."
+
+"Looking for a Frontend Developer? Let’s make it happen."
+
+Looking for a Frontend Developer? Your search ends here.
+Lets make it happen. 
+Lets Make it epic
+
+
+
+import React, { useState, useEffect, useContext } from 'react';
+import { themeContext } from '../context/ThemeContext';
+
+const TypingEffect = ({ texts }) => {
+  const { theme } = useContext(themeContext);
+
+  const [showText, setShowText] = useState(""); // To show the typed text
+  const [index, setIndex] = useState(0); // To track the character position
+  const [sentenceIndex, setSentenceIndex] = useState(0); // To track the current sentence
+
+  useEffect(() => {
+    if (sentenceIndex < texts.length) {
+      const currentSentence = texts[sentenceIndex];
+
+      // Create a typing effect for each sentence
+      const interval = setInterval(() => {
+        if (index < currentSentence.length) {
+          setShowText((prev) => prev + currentSentence[index]); // Append character
+          setIndex((prev) => prev + 1); // Move to the next character
+        } else {
+          clearInterval(interval); // Stop once sentence is typed
+          setTimeout(() => {
+            setIndex(0); // Reset index for the next sentence
+            setShowText(""); // Clear the current sentence
+            setSentenceIndex((prev) => prev + 1); // Move to the next sentence
+          }, 1000); // Wait 1 second before typing the next sentence
+        }
+      }, 100); // Typing speed: 100ms per character
+
+      return () => clearInterval(interval); // Cleanup on unmount
+    }
+  }, [index, sentenceIndex, texts]); // Run effect when `index` or `sentenceIndex` changes
+
+  return <div>{showText}</div>;
 };
 
-export default CustomHelmet;
+export default TypingEffect;
 
 
+- - - - - - -
 
-// AnyPage.jsx
-import React from 'react';
-import CustomHelmet from './CustomHelmet';
+import { useState, useEffect } from 'react';
 
-const AnyPage = () => {
+const SequentialTyping = () => {
+  const teaser = [
+    "Looking for a Frontend Dev? Your search ends here.",
+    "Lets make it happen.",
+    "Lets Make it epic"
+  ];
+  
+  const [lines, setLines] = useState(['', '', '']);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [currentChar, setCurrentChar] = useState(0);
+
+  useEffect(() => {
+    if (currentLine >= teaser.length) return;
+
+    const timeout = setTimeout(() => {
+      if (currentChar < teaser[currentLine].length) {
+        setLines(prev => {
+          const newLines = [...prev];
+          newLines[currentLine] = teaser[currentLine].substring(0, currentChar + 1);
+          return newLines;
+        });
+        setCurrentChar(prev => prev + 1);
+      } else {
+        setCurrentLine(prev => prev + 1);
+        setCurrentChar(0);
+      }
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, [currentLine, currentChar]);
+
   return (
-    <div>
-      <CustomHelmet 
-        title="Custom Page Title" 
-        description="This is a custom description for the page."
-        robotsContent="noindex, follow" // Optional
-      />
-      <h1>Welcome to My Page</h1>
-      <p>This is a great page!</p>
+    <div className="space-y-4">
+      {lines.map((line, index) => (
+        <div key={index} className="text-2xl font-bold">
+          {line}
+          {currentLine === index && 
+            <span className="inline-block w-[2px] h-6 bg-black ml-1 animate-pulse" />
+          }
+        </div>
+      ))}
     </div>
   );
 };
 
-export default AnyPage;
+export default SequentialTyping;
 
 
-<Helmet>
-  <meta property="og:title" content="Your Page Title" />
-  <meta property="og:description" content="Description of your page for social media." />
-  <meta property="og:image" content="URL to your image" />
-  <meta name="twitter:card" content="summary" />
-</Helmet>
+-_--------_
+
+
+{teaser.map((_, index) => (
+  <div key={index} className="text-2xl font-bold">
+    {lines[index] || ''}
+    {currentLine === index && 
+      <span className="inline-block w-[2px] h-6 bg-black ml-1 animate-pulse" />
+    }
+  </div>
+))}
+
+
+
+
+
+
+------
+
+
+
+        <div className="flex justify-start items-end">
+          <div>
+            {lines && lines.length <= teaser.length && lines.map((line, index) => (
+              <div key={index} className={`w-[300px] p-2 text-[16px] text-left`}>
+                {line} 
+                {(index === lines.filter(l => l).length - 1) && <span className="jumpUnderscore">_</span>}           
+             
+              </div>
+            ))}            
+          </div>
+          {/*<span className={`jumpUnderscore`}>_</span>          */}
+        </div>
+
+
