@@ -12,6 +12,7 @@ import { GiFlowerTwirl } from "react-icons/gi";
 import { FaBehanceSquare } from "react-icons/fa";
 import { IoLinkOutline } from "react-icons/io5";
 import { ImBlogger2 } from "react-icons/im";
+import { FaFileDownload } from "react-icons/fa";
 
 const Portfolio = () => {
   const terminalHeading = `tishrabon:\\portfolio\\portfolio.exe`;
@@ -24,6 +25,16 @@ const Portfolio = () => {
         terminal={terminalHeading}
         marshmallow={marshmallowHeading}
       />
+
+      <a 
+        href="/tishrabonCV.pdf"
+        dowload="Towhidul Islam Shrabon CV"
+        className={`w-full flex justify-end items-center mb-5 sm:my-0`}>
+        <div className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
+          <FaFileDownload size={30} />
+          <p>CV</p>            
+        </div>
+      </a>      
 
       {/*PORTFOLIO CONTAINER*/}
       <div

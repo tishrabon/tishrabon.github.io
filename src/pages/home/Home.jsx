@@ -124,7 +124,7 @@ const Home = ({ stick }) => {
         className="hero-section verticalS mb-[200px] h-[100vh] rounded-md border-none"
       >
         {/*logo part*/}
-        <div className="verticalC relative h-[250px] w-[300px]">
+        <div key={animationKey} className="verticalC relative h-[250px] w-[300px]">
           <img
             className={`${theme === "dark" ? "darkshadow" : "lightshadow"} logo-part right rounded-[11px]`}
             src={theme === "dark" ? darkmotion1 : lightmotion1}
@@ -151,7 +151,7 @@ const Home = ({ stick }) => {
           <div key={typingKey} className={`${theme === "dark" ? "" : "text-lightfont"} relative max-w-[75%] left-[42px] top-[-20px] z-[10] flex justify-start items-end h-[150px] w-[330px]`}>
             <div>
               {lines && lines.length <= teaser.length && lines.map((line, index) => (
-                <div key={index} className={`p-1 text-[16px] text-left`}>
+                <div key={index} className={`p-1 text-[15px] text-left`}>
                   {line} 
                   {(index === lines.filter(l => l).length - 1) && <span className="jumpUnderscore">{theme === 'dark' ? "_" : "|"}</span>}           
                

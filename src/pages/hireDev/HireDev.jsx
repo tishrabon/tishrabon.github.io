@@ -13,6 +13,8 @@ import {
 } from "react-icons/fa6";
 import { FaHandshake, FaQuestionCircle } from "react-icons/fa";
 
+import { FaFileDownload } from "react-icons/fa";
+
 const HireDev = () => {
   const terminalHeading = `tishrabon:\\portfolio\\hireDev.exe`;
   const marshmallowHeading = `Hire Dev`;
@@ -25,12 +27,23 @@ const HireDev = () => {
         marshmallow={marshmallowHeading}
       />
 
+      <a 
+        href="/tishrabonCV.pdf"
+        dowload="Towhidul Islam Shrabon CV"
+        className={`w-full flex justify-end items-center`}>
+        <div className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
+          <FaFileDownload size={30} />
+          <p>CV</p>            
+        </div>
+      </a>      
+
       {/*section 1 container*/}
       <div className="verticalS mx-5 mt-5 gap-10">
         {/*banner & intro container*/}
         <div
           className={`flex max-w-[700px] flex-col items-center justify-center gap-5 sm:flex-row sm:items-center sm:gap-10 md:gap-20`}
         >
+
           {/*BANNER*/}
           <div className={`relative w-[200px]`}>
             <FaAddressCard

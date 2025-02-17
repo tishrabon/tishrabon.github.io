@@ -38,6 +38,8 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 import { SiSublimetext } from "react-icons/si";
 import { PiHourglassSimpleLowFill } from "react-icons/pi";
 
+import { FaFileDownload } from "react-icons/fa";
+
 const DevsInsight = () => {
   const { theme } = useContext(themeContext);
   const location = useLocation();
@@ -103,6 +105,17 @@ const DevsInsight = () => {
         terminal={terminalHeading}
         marshmallow={marshmallowHeading}
       />
+
+      <a 
+        href="/tishrabonCV.pdf"
+        dowload="Towhidul Islam Shrabon CV"
+        className={`w-full flex justify-end items-center my-5`}>
+        <div className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
+          <FaFileDownload size={30} />
+          <p>CV</p>            
+        </div>
+      </a>  
+
       <div className="verticalS w-full gap-5">
         {/*ONE LINE BIO*/}
         <p className="text-2xl">Hi! I’m Shrabon, a React Frontend Developer.</p>

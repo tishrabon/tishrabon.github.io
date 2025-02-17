@@ -20,7 +20,7 @@ const Footer = () => {
 const { theme } = useContext(themeContext);
 
   return (
-    <div className={`${theme === "dark" ? "" : ""} relative w-full rounded-tl-[30px] rounded-tr-[30px] max-w-[1000px] p-10 verticalS h-[1400px] overflow-hidden`}      
+    <div className={`${theme === "dark" ? "" : ""} relative w-full rounded-tl-[30px] rounded-tr-[30px] p-10 verticalS h-[1400px] overflow-hidden sm:w-[80vw] max-w-[1200px]`}      
       id="footer"
     >      
       {/*<img src="tishrabon-frost-original.svg" alt="" className="rotatingMonkz" />*/}
@@ -38,7 +38,7 @@ const { theme } = useContext(themeContext);
 
         <CgHello size={80} className={`text-lightmain mt-10`}/>       
 
-        <p className={`text-[18px] sm:text-xl`}>
+        <p className={`text-[18px] sm:text-xl max-w-[900px]`}>
           Maybe you’re not looking to collaborate right now, but who knows
           about the future? Let’s stay connected, just in case our paths
           align down the road in the future...

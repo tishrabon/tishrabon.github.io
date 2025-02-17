@@ -7,11 +7,6 @@
 3. How do you handle constructive criticism on your work?
    ans: "If someone’s giving me constructive criticism, it means I either lack something or need to improve, right? So why wouldn’t I take advantage of it? It’s a win-win. I grow, and the company benefits."
 
-4. What’s your favorite type of project to work on, and why?
-   ans: "I'm into non-competitive, simulation-based apps that let users build highly customizable, unreal worlds. I'm also into all-in-one apps that simplify life, helping people focus on what truly matters instead of juggling multiple apps."
-
-   > > pending.... <<
-
 5. If you could reshape one famous app or website, what would it be and why?
    ans: "I'd reshape YouTube. My feed is flooded with unwanted or least wanted content, with no way to block channels or effectively report ads, all in pursuit of revenue. This short-sighted approach erodes genuine brand loyalty (mine included) and frustrates users, leaving advertisers with an audience that's anything but ideal. All this stems from the lack of a real system for users to express their preferences, a system that YouTube simply ignores. I'd introduce robust feedback features to create a healthier balance between users, YouTube, and advertisers."
 
