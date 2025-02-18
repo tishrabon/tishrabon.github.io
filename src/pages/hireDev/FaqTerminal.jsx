@@ -153,7 +153,7 @@ const FaqTerminal = () => {
                 }
               }}
             />
-            <span className="jumpUnderscore">{"_"}</span>
+            {/*<span className="jumpUnderscore">{"_"}</span>*/}
           </div>
         </div>
       </div>

@@ -1,162 +1,31 @@
-"Bringing Designs to Life. Delivering Excellence. Ending Your Search."
+## Portfolio
+
+This repository contains my personal portfolio project. It is designed and developed by **Towhidul Islam Shrabon** (tishrabon), showcasing my work and skills as a Frontend Developer.
+
+### Usage & Copyright
+
+All content, design, and code in this repository are the intellectual property of **Towhidul Islam Shrabon** (tishrabon). Please do not use, copy, or redistribute the design, layout, or any part of the code without explicit permission. Unauthorized use or modification is prohibited.
+
+---
+
+## Technologies Used
+
+- **React** (v18.3.1)   
+- **React Icons** (v5.3.0)  
+- **TailwindCSS** (v3.4.15)  
+- **Vite** (v5.4.10)  
+
+These are the primary libraries and tools used to build and maintain the portfolio.
 
 
-"Looking for a Frontend Developer? Your search ends here."
-
-"Looking for a Frontend Developer? Let’s make it happen."
-
-Looking for a Frontend Developer? Your search ends here.
-Lets make it happen. 
-Lets Make it epic
-
-
-
-import React, { useState, useEffect, useContext } from 'react';
-import { themeContext } from '../context/ThemeContext';
-
-const TypingEffect = ({ texts }) => {
-  const { theme } = useContext(themeContext);
-
-  const [showText, setShowText] = useState(""); // To show the typed text
-  const [index, setIndex] = useState(0); // To track the character position
-  const [sentenceIndex, setSentenceIndex] = useState(0); // To track the current sentence
-
-  useEffect(() => {
-    if (sentenceIndex < texts.length) {
-      const currentSentence = texts[sentenceIndex];
-
-      // Create a typing effect for each sentence
-      const interval = setInterval(() => {
-        if (index < currentSentence.length) {
-          setShowText((prev) => prev + currentSentence[index]); // Append character
-          setIndex((prev) => prev + 1); // Move to the next character
-        } else {
-          clearInterval(interval); // Stop once sentence is typed
-          setTimeout(() => {
-            setIndex(0); // Reset index for the next sentence
-            setShowText(""); // Clear the current sentence
-            setSentenceIndex((prev) => prev + 1); // Move to the next sentence
-          }, 1000); // Wait 1 second before typing the next sentence
-        }
-      }, 100); // Typing speed: 100ms per character
-
-      return () => clearInterval(interval); // Cleanup on unmount
-    }
-  }, [index, sentenceIndex, texts]); // Run effect when `index` or `sentenceIndex` changes
-
-  return <div>{showText}</div>;
-};
-
-export default TypingEffect;
-
-
-- - - - - - -
-
-import { useState, useEffect } from 'react';
-
-const SequentialTyping = () => {
-  const teaser = [
-    "Looking for a Frontend Dev? Your search ends here.",
-    "Lets make it happen.",
-    "Lets Make it epic"
-  ];
-  
-  const [lines, setLines] = useState(['', '', '']);
-  const [currentLine, setCurrentLine] = useState(0);
-  const [currentChar, setCurrentChar] = useState(0);
-
-  useEffect(() => {
-    if (currentLine >= teaser.length) return;
-
-    const timeout = setTimeout(() => {
-      if (currentChar < teaser[currentLine].length) {
-        setLines(prev => {
-          const newLines = [...prev];
-          newLines[currentLine] = teaser[currentLine].substring(0, currentChar + 1);
-          return newLines;
-        });
-        setCurrentChar(prev => prev + 1);
-      } else {
-        setCurrentLine(prev => prev + 1);
-        setCurrentChar(0);
-      }
-    }, 100);
-
-    return () => clearTimeout(timeout);
-  }, [currentLine, currentChar]);
-
-  return (
-    <div className="space-y-4">
-      {lines.map((line, index) => (
-        <div key={index} className="text-2xl font-bold">
-          {line}
-          {currentLine === index && 
-            <span className="inline-block w-[2px] h-6 bg-black ml-1 animate-pulse" />
-          }
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default SequentialTyping;
-
-
--_--------_
-
-
-{teaser.map((_, index) => (
-  <div key={index} className="text-2xl font-bold">
-    {lines[index] || ''}
-    {currentLine === index && 
-      <span className="inline-block w-[2px] h-6 bg-black ml-1 animate-pulse" />
-    }
-  </div>
-))}
+- - - - - - -  -
 
 
 
+## Portfolio
 
+This repository contains my personal portfolio project, built as a ReactJS app using **TailwindCSS** and other essential technologies.
 
+### Usage & Copyright
 
-------
-
-
-
-        <div className="flex justify-start items-end">
-          <div>
-            {lines && lines.length <= teaser.length && lines.map((line, index) => (
-              <div key={index} className={`w-[300px] p-2 text-[16px] text-left`}>
-                {line} 
-                {(index === lines.filter(l => l).length - 1) && <span className="jumpUnderscore">_</span>}           
-             
-              </div>
-            ))}            
-          </div>
-          {/*<span className={`jumpUnderscore`}>_</span>          */}
-        </div>
-
-
-
-
-
-
-
-
-`
-  Ambitious Frontend Developer with a strategic mindset and strong technical skills. Focused on delivering user-centric solutions while constantly evolving to meet future needs. Skilled in problem-solving, adaptable to challenges, and passionate about continuous learning. Ready to bring innovative, high-impact development to any team.
-
-
-`
-
-
-
-`As a fresher, I'm eager to begin my programming career, focusing on high-quality work and a long-term vision for growth and innovation.`
-
-
-
-`As a fresher, I'm eager to begin my programming career, focusing on high-quality work and a long-term vision for growth and innovation. With a strong problem-solving mindset and adaptability, I deliver impactful solutions and consistently push myself to improve.`
-
-
-`As a fresher, I'm eager to begin my programming career with a focus on quality and long-term growth. Proficient in ReactJS, Tailwind, and Redux Toolkit, I deliver impactful solutions with a strong problem-solving mindset and adaptability.`
-
+All content, design, and code in this repository are the intellectual property of **Towhidul Islam Shrabon** (tishrabon). Please do not use, copy, or redistribute the design, layout, or any part of the code without explicit permission. Unauthorized use or modification is prohibited.

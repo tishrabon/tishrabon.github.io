@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import PageHeading from "../../components/PageHeading";
 import ChapterHead from "./ChapterHead";
+import DownloadCv from "../../components/DownloadCv";
 
 // react icons
 import { RiUserSearchLine, RiUserSearchFill } from "react-icons/ri";
@@ -55,7 +56,7 @@ const DevsInsight = () => {
   const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "rubbertapRevJr text-lightmain"} verticalC m-2 h-auto w-24 rounded-md p-2`;
 
   const chapterOne = {
-    p1: "I live in Dhaka, Bangladesh. I'm a self-taught programmer. I was pursuing a degree in Computer Science & Engineering but took a break due to certain circumstances. I might resume it in the future.",
+    p1: "I live in Dhaka, Bangladesh. I'm a self-taught programmer. I was pursuing a degree in Computer Science & Engineering but took a break due to certain circumstances. I might resume it in the future. Native in Bangla, confident in English for professional work.",
 
     p2: "The biggest thing I enjoy about coding is the ability to create something complex and comprehensive using just code and algorithms. It's an addiction I can't get enough of. Whether it's learning a new framework or solving complex problems, I focus on quality and originality.",
 
@@ -106,15 +107,9 @@ const DevsInsight = () => {
         marshmallow={marshmallowHeading}
       />
 
-      <a 
-        href="/tishrabonCV.pdf"
-        dowload="Towhidul Islam Shrabon CV"
-        className={`w-full flex justify-end items-center my-5`}>
-        <div className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
-          <FaFileDownload size={30} />
-          <p>CV</p>            
-        </div>
-      </a>  
+      <div className="w-full flex justify-end my-5">
+        <DownloadCv />
+      </div>       
 
       <div className="verticalS w-full gap-5">
         {/*ONE LINE BIO*/}

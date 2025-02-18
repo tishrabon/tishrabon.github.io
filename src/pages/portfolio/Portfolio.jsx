@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { themeContext } from "../../context/ThemeContext";
 import PageHeading from "../../components/PageHeading";
+import DownloadCv from "../../components/DownloadCv";
 
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineLiveTv } from "react-icons/md";
@@ -26,15 +27,9 @@ const Portfolio = () => {
         marshmallow={marshmallowHeading}
       />
 
-      <a 
-        href="/tishrabonCV.pdf"
-        dowload="Towhidul Islam Shrabon CV"
-        className={`w-full flex justify-end items-center mb-5 sm:my-0`}>
-        <div className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
-          <FaFileDownload size={30} />
-          <p>CV</p>            
-        </div>
-      </a>      
+      <div className="w-full flex justify-end mb-5">
+        <DownloadCv />
+      </div>        
 
       {/*PORTFOLIO CONTAINER*/}
       <div

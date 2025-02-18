@@ -59,7 +59,7 @@ const Home = ({ stick }) => {
   // hero/typewriter/teaser
   const teaser = [
     "> Looking for a Frontend Dev? Your search ends here.",
-    "> Lets make it happen.",
+    "> Explore your dev below!",
     "> Lets Make it epic"
   ];
 
@@ -177,7 +177,7 @@ const Home = ({ stick }) => {
       ></div>
 
       {/*HOME CONTENTS START HERE */}
-      <div className="home-contents verticalS relative top-0 gap-20">
+      <div className="home-contents verticalS relative top-0 gap-10">
         {/* BIO, TEASE/ABOUT, CTAs  */}
         <div tabIndex="0" className="mb-1">
           {theme === "dark" ? (
@@ -205,7 +205,9 @@ const Home = ({ stick }) => {
                   </span>{" "}
                   <span>{`tishrabon:\\bio\\terminal.exe`}</span>
                 </div>
-                <div className="flex flex-col items-start justify-start p-2 text-[16px]">
+                <div 
+                  onClick={() => terminalInputRef.current.focus()}
+                  className="flex flex-col items-start justify-start p-2 text-[16px]">
                   <p>
                     {" "}
                     {`>`} {intro101}{" "}
@@ -227,7 +229,7 @@ const Home = ({ stick }) => {
                         {falseCmdCounts})
                       </span>
                     </div>
-                    <div onClick={() => terminalInputRef.current.focus()}>
+                    <div>
                       {"> "}
                       <input
                         ref={terminalInputRef}
@@ -242,7 +244,7 @@ const Home = ({ stick }) => {
                           }
                         }}
                       />
-                      <span className="jumpUnderscore">{"_"}</span>
+                      {/*<span className="jumpUnderscore">{"_"}</span>*/}
                     </div>
                   </div>
                 </div>

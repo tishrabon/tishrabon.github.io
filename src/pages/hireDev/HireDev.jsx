@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { themeContext } from "../../context/ThemeContext";
 import PageHeading from "../../components/PageHeading";
+import DownloadCv from "../../components/DownloadCv";
 import FaqTerminal from "./FaqTerminal";
 import FaqMarshmallow from "./FaqMarshmallow";
 
@@ -27,15 +28,9 @@ const HireDev = () => {
         marshmallow={marshmallowHeading}
       />
 
-      <a 
-        href="/tishrabonCV.pdf"
-        dowload="Towhidul Islam Shrabon CV"
-        className={`w-full flex justify-end items-center`}>
-        <div className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
-          <FaFileDownload size={30} />
-          <p>CV</p>            
-        </div>
-      </a>      
+      <div className="w-full flex justify-end">
+        <DownloadCv />
+      </div>              
 
       {/*section 1 container*/}
       <div className="verticalS mx-5 mt-5 gap-10">
