@@ -163,8 +163,6 @@ const Home = ({ stick }) => {
 
         </div>
 
-        {/*typing effect teaser*/}
-
 
 
 
