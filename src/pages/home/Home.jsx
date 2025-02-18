@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { themeContext } from "../../context/ThemeContext";
 import TypingEffect from '../../components/TypingEffect';
-import TeaserTyping from '../../components/TeaserTyping';
 import { useNavigate, Link } from "react-router-dom";
 
 import darkmotion1 from "/tishrabon-original-codeface.svg";

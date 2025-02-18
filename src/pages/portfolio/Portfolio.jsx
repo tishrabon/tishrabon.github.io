@@ -78,6 +78,7 @@ const Portfolio = () => {
             <img
               src="https://i.ibb.co.com/mzvmk49/110-1.jpg"
               alt="tishrabon-project1-myShopp"
+              loading="lazy"
               className={`h-full w-full object-cover`}
             />
           </div>
