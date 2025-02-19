@@ -23,7 +23,15 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>tishrabon-beta</title>
+    <script>
+      const path = localStorage.getItem('path');
+      if (path) {
+        localStorage.removeItem('path');
+        window.history.replaceState(null, null, path);
+      }
+    </script>
+
+    <title>Towhidul Islam Shrabon</title>
   </head>
   <body>
     <div id="root"></div>
