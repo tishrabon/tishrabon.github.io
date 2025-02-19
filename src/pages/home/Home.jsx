@@ -156,8 +156,7 @@ const Home = ({ stick }) => {
                
                 </div>
               ))}            
-            </div>
-            {/*<span className={`jumpUnderscore`}>_</span>          */}
+            </div>          
           </div>          
 
         </div>
