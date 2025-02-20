@@ -102,7 +102,7 @@ const DevsInsight = () => {
 
   return (
     <div className="otherpage-container verticalS text-center">
-      <HelmetTag />
+      <HelmetTag title="Dev's Insight"/>
       {/*PAGE HEADING*/}
       <PageHeading
         terminal={terminalHeading}

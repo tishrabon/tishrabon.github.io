@@ -24,7 +24,7 @@ const HireDev = () => {
 
   return (
     <div className="otherpage-container verticalS gap-10 text-center">
-      <HelmetTag />
+      <HelmetTag title="Hire Dev" />
       <PageHeading
         terminal={terminalHeading}
         marshmallow={marshmallowHeading}

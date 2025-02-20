@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const HelmetTag = () => {
+const HelmetTag = ({title="tishrabon"}) => {
   return (
     <div>
       <Helmet>
         {/* Page Title & Basics */}
-        <title>tishrabon - home</title>
+        <title>{`${title} - tishrabon`}</title>
         <meta name="author" content="Towhidul Islam Shrabon" />
         <meta name="description" content="I'm a frontend React developer crafting sleek, high-performance web apps. Let’s make it epic." />
         <meta name="keywords" content="Frontend Developer, React Developer, Web Development, JavaScript, Portfolio, JS" />
