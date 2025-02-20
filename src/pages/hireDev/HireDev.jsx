@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { themeContext } from "../../context/ThemeContext";
+import HelmetTag from "../../reactHelmet/HelmetTag";
 import PageHeading from "../../components/PageHeading";
 import DownloadCv from "../../components/DownloadCv";
 import FaqTerminal from "./FaqTerminal";
@@ -23,6 +24,7 @@ const HireDev = () => {
 
   return (
     <div className="otherpage-container verticalS gap-10 text-center">
+      <HelmetTag />
       <PageHeading
         terminal={terminalHeading}
         marshmallow={marshmallowHeading}

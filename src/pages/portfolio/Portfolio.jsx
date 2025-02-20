@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { themeContext } from "../../context/ThemeContext";
 import PageHeading from "../../components/PageHeading";
+import HelmetTag from "../../reactHelmet/HelmetTag";
 import DownloadCv from "../../components/DownloadCv";
 
 import { FaGithub } from "react-icons/fa";
@@ -22,6 +23,7 @@ const Portfolio = () => {
 
   return (
     <div className="otherpage-container verticalS gap-10 text-center">
+      <HelmetTag />
       <PageHeading
         terminal={terminalHeading}
         marshmallow={marshmallowHeading}

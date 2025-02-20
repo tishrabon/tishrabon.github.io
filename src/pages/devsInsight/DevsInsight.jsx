@@ -1,5 +1,6 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { themeContext } from "../../context/ThemeContext";
+import HelmetTag from "../../reactHelmet/HelmetTag";
 import { useLocation } from "react-router-dom";
 
 import PageHeading from "../../components/PageHeading";
@@ -101,6 +102,7 @@ const DevsInsight = () => {
 
   return (
     <div className="otherpage-container verticalS text-center">
+      <HelmetTag />
       {/*PAGE HEADING*/}
       <PageHeading
         terminal={terminalHeading}

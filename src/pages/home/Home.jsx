@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { themeContext } from "../../context/ThemeContext";
+import HomeHelmet from "../../reactHelmet/HomeHelmet";
 import TypingEffect from '../../components/TypingEffect';
 import { useNavigate, Link } from "react-router-dom";
 
@@ -117,7 +118,8 @@ const Home = ({ stick }) => {
         marginTop: stick ? "-30px" : "0",
         transition: "margin-top 1s ease",
       }}
-    >
+    > 
+      <HomeHelmet />
       {/*LOGO ANIMATION / HERO */}
       <div
         className="hero-section verticalS mb-[200px] h-[100vh] rounded-md border-none"
