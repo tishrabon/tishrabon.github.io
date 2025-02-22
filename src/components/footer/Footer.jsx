@@ -57,7 +57,7 @@ const Footer = () => {
           >
             <p>Email Me</p>
             <MdEmail size={50} />
-            <p className="text-sm sm:text-base">tishrabon.official@gmail.com</p>
+            <p className="text-sm sm:text-base">tishrabon.office@gmail.com</p>
           </div>
 
           {/*LINKEDIN*/}
