@@ -1,23 +1,24 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 import { FaFileDownload } from "react-icons/fa";
-import { themeContext } from "../context/ThemeContext"
+import { themeContext } from "../context/ThemeContext";
 
 const DownloadCv = () => {
   const { theme } = useContext(themeContext);
   return (
     <div>
-
-      <div 
-        className={`kire`}>
-        <a 
+      <div className={`kire`}>
+        <a
           href="/tishrabonCV.pdf"
           dowload="Towhidul Islam Shrabon CV"
-          className={`${theme === 'dark' ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 py-4 px-6 rounded-md`}>
-          <FaFileDownload size={30} className={`${theme === 'dark' ? "" : "text-lightmain"}`}/>
-          <p className="mt-1">Get CV</p>            
+          className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 rounded-md px-6 py-4`}
+        >
+          <FaFileDownload
+            size={30}
+            className={`${theme === "dark" ? "" : "text-lightmain"}`}
+          />
+          <p className="mt-1">Get CV</p>
         </a>
-      </div>   
-
+      </div>
     </div>
   );
 };

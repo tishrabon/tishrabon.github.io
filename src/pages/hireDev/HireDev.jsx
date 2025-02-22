@@ -30,9 +30,9 @@ const HireDev = () => {
         marshmallow={marshmallowHeading}
       />
 
-      <div className="w-full flex justify-end">
+      <div className="flex w-full justify-end">
         <DownloadCv />
-      </div>              
+      </div>
 
       {/*section 1 container*/}
       <div className="verticalS mx-5 mt-5 gap-10">
@@ -40,7 +40,6 @@ const HireDev = () => {
         <div
           className={`flex max-w-[700px] flex-col items-center justify-center gap-5 sm:flex-row sm:items-center sm:gap-10 md:gap-20`}
         >
-
           {/*BANNER*/}
           <div className={`relative w-[200px]`}>
             <FaAddressCard
@@ -140,7 +139,9 @@ const HireDev = () => {
           <button
             className={`${theme === "dark" ? "bg-main text-vsmain" : "rubberbuttonRevJr"} my-5 rounded-[10px] p-2 px-6 sm:text-lg`}
             onClick={() => {
-              document.getElementById("footer").scrollIntoView({behavior: 'smooth'});
+              document
+                .getElementById("footer")
+                .scrollIntoView({ behavior: "smooth" });
             }}
           >
             Let's Connect!

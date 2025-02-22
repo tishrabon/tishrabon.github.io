@@ -21,8 +21,8 @@ const Header = ({ stick }) => {
   const [time, setTime] = useState("");
 
   const scrollToFooter = () => {
-    document.getElementById("footer").scrollIntoView({behavior: 'smooth'});
-  }
+    document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+  };
 
   // navlinks/tishrabon
   const navs = [
@@ -76,7 +76,7 @@ const Header = ({ stick }) => {
   // for time
   useEffect(() => {
     const updateTime = () => {
-      const bdTime = new Date().toLocaleString('en-US', {
+      const bdTime = new Date().toLocaleString("en-US", {
         timeZone: "Asia/Dhaka",
         hour: "2-digit",
         minute: "2-digit",
@@ -85,14 +85,14 @@ const Header = ({ stick }) => {
       });
 
       setTime(bdTime);
-    }
+    };
 
-    const exeTime = setInterval(updateTime, 60000);
+    const exeTime = setInterval(updateTime, 15000);
 
     updateTime();
 
     return () => clearInterval(exeTime);
-  }, [])
+  }, []);
 
   return (
     <div
@@ -187,15 +187,15 @@ const Header = ({ stick }) => {
                 >
                   {theme === "dark" ? link.linkNameD : link.linkNameL}
                 </NavLink>
-              </li>        
+              </li>
             ))}
 
-            <button 
+            <button
               className={`${navpass ? "show-nav" : ""} ${theme === "dark" ? "bg-mainbb text-vsmain" : "bg-vslight text-lightfont"} navLinks rounded-md border-none p-2 text-left`}
               style={{ transitionDelay: `${navs.length + 2 * 100}ms` }}
               onClick={() => {
                 scrollToFooter();
-                setNavpass((prev) => !prev);                
+                setNavpass((prev) => !prev);
               }}
             >
               {theme === "dark" ? "> let's connect!" : "Let's Connect!"}

@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { themeContext } from '../../context/ThemeContext';
+import React, { useState, useContext } from "react";
+import { themeContext } from "../../context/ThemeContext";
 import { RiUserAddFill, RiGlobalFill } from "react-icons/ri";
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
@@ -14,41 +14,41 @@ import { RxGlobe } from "react-icons/rx";
 import { HiGlobeAlt } from "react-icons/hi2";
 import { BsGlobe } from "react-icons/bs";
 
-
-
-const Footer = () => {  
-const { theme } = useContext(themeContext);
+const Footer = () => {
+  const { theme } = useContext(themeContext);
 
   return (
-    <div className={`${theme === "dark" ? "" : ""} relative w-full rounded-tl-[30px] rounded-tr-[30px] p-10 verticalS h-[1400px] overflow-hidden sm:w-[80vw] max-w-[1200px]`}      
+    <div
+      className={`${theme === "dark" ? "" : ""} verticalS relative h-[1400px] w-full max-w-[1200px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] p-10 sm:w-[80vw]`}
       id="footer"
-    >      
+    >
       {/*<img src="tishrabon-frost-original.svg" alt="" className="rotatingMonkz" />*/}
 
-      <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0 mt-[50px]`}>
-        <BsGlobe className={`h-[1300px] w-[1300px] rotatingSloth`} />
-      </div> 
+      <div
+        className={`${theme === "dark" ? "" : "text-slate-400"} inset-0 mt-[50px]`}
+      >
+        <BsGlobe className={`rotatingSloth h-[1300px] w-[1300px]`} />
+      </div>
 
- {/*     <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
+      {/*     <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
         <BsGlobe className={`h-[100vh] w-[100vh] rotatingSloth`} />
-      </div> */}           
+      </div> */}
 
       {/*MAIN CONTAINER*/}
-      <div className={`${theme === "dark" ? "bg-darknavbg text-lightmain" : "bg-lightnavbg text-lightfont"} frostglassFooter absolute inset-0 verticalS rounded-tl-[16px] rounded-tr-[16px] p-5 gap-5 text-center`}> 
+      <div
+        className={`${theme === "dark" ? "bg-darknavbg text-lightmain" : "bg-lightnavbg text-lightfont"} frostglassFooter verticalS absolute inset-0 gap-5 rounded-tl-[16px] rounded-tr-[16px] p-5 text-center`}
+      >
+        <CgHello size={80} className={`mt-10 text-lightmain`} />
 
-        <CgHello size={80} className={`text-lightmain mt-10`}/>       
-
-        <p className={`text-[18px] sm:text-xl max-w-[900px]`}>
-          Maybe you’re not looking to collaborate right now, but who knows
-          about the future? Let’s stay connected, just in case our paths
-          align down the road in the future...
-        </p>  
-
-        <FaEarthAsia size={80} className={`text-lightmain rotatingMonk`}/> 
-
-        <p className={`text-[30px]`}>
-          Let's Connect!
+        <p className={`max-w-[900px] text-[18px] sm:text-xl`}>
+          Maybe you’re not looking to collaborate right now, but who knows about
+          the future? Let’s stay connected, just in case our paths align down
+          the road in the future...
         </p>
+
+        <FaEarthAsia size={80} className={`rotatingMonk text-lightmain`} />
+
+        <p className={`text-[30px]`}>Let's Connect!</p>
 
         <div className={`verticalS gap-10`}>
           {/*EMAIL*/}
@@ -57,10 +57,8 @@ const { theme } = useContext(themeContext);
           >
             <p>Email Me</p>
             <MdEmail size={50} />
-            <p className="text-sm sm:text-base">
-              tishrabon.official@gmail.com
-            </p>
-          </div>   
+            <p className="text-sm sm:text-base">tishrabon.official@gmail.com</p>
+          </div>
 
           {/*LINKEDIN*/}
           <div
@@ -94,7 +92,6 @@ const { theme } = useContext(themeContext);
             </a>
           </div>
 
-
           {/*X*/}
           <div
             className={`${theme === "dark" ? "terminalbutton" : "rubberbutton2"} verticalC w-full rounded-md p-4`}
@@ -109,22 +106,31 @@ const { theme } = useContext(themeContext);
               <FaSquareXTwitter size={50} />
               <span className="text-sm">@tishrabon</span>
             </a>
-          </div>        
-                    
+          </div>
         </div>
 
-        <p>Thanks for stopping by! Let’s connect and hope we get to work together soon!</p>
+        <p>
+          Thanks for stopping by! Let’s connect and hope we get to work together
+          soon!
+        </p>
 
-        <div className={`text-lg px-5 w-full h-[150px] flex flex-col justify-end items-center`}>
+        <div
+          className={`flex h-[150px] w-full flex-col items-center justify-end px-5 text-lg`}
+        >
           <p className={`text-sm`}>Originally Coded by</p>
 
-          <p className={`${theme === 'dark' ? "border-lightmain" : ""} border-b pb-1 mb-3`}>T.I. Shrabon</p>
+          <p
+            className={`${theme === "dark" ? "border-lightmain" : ""} mb-3 border-b pb-1`}
+          >
+            T.I. Shrabon
+          </p>
 
-          <p className={`text-xs`}>All rights reserved. Unauthorized use of this code is strictly prohibited.</p>
+          <p className={`text-xs`}>
+            All rights reserved. Unauthorized use of this code is strictly
+            prohibited.
+          </p>
         </div>
-    
       </div>
-
     </div>
   );
 };

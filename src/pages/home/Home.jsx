@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { themeContext } from "../../context/ThemeContext";
 import HomeHelmet from "../../reactHelmet/HomeHelmet";
-import TypingEffect from '../../components/TypingEffect';
+import TypingEffect from "../../components/TypingEffect";
 import { useNavigate, Link } from "react-router-dom";
 
 import darkmotion1 from "/tishrabon-original-codeface.svg";
@@ -38,7 +38,6 @@ import { FaLinkedin } from "react-icons/fa";
 
 import { IoTv, IoTvOutline } from "react-icons/io5";
 
-
 const Home = ({ stick }) => {
   const { theme } = useContext(themeContext);
   const navigate = useNavigate();
@@ -49,7 +48,7 @@ const Home = ({ stick }) => {
   const [falseCmd, setFalseCmd] = useState(false);
   const [falseCmdCounts, setFalseCmdCounts] = useState(0);
   const [navInsight, setNavInsight] = useState("");
-  const holla = "I'm your frontend dev, Shrabon!";
+  const holla = "I'm your frontend react dev, Shrabon!";
 
   const intro101 =
     "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
@@ -60,10 +59,10 @@ const Home = ({ stick }) => {
   const teaser = [
     "> Looking for a Frontend Dev? Your search ends here.",
     "> Explore your dev below!",
-    "> Lets Make it epic"
+    "> Lets Make it epic",
   ];
 
-  const [lines, setLines] = useState(Array(teaser.length).fill(''));
+  const [lines, setLines] = useState(Array(teaser.length).fill(""));
   const [currentLine, setCurrentLine] = useState(0);
   const [currentCh, setCurrentCh] = useState(0);
 
@@ -71,18 +70,20 @@ const Home = ({ stick }) => {
     if (currentLine >= teaser.length) return;
     const timeout = setTimeout(() => {
       if (currentCh < teaser[currentLine].length) {
-        setLines(prev => {
+        setLines((prev) => {
           const newLines = [...prev];
-          newLines[currentLine] = teaser[currentLine].substring(0, currentCh + 1);
+          newLines[currentLine] = teaser[currentLine].substring(
+            0,
+            currentCh + 1,
+          );
           return newLines;
         });
-        setCurrentCh(prev => prev + 1)
-      }      
-      else {        
-        setCurrentLine(prev => prev + 1);  
-        setCurrentCh(0);      
+        setCurrentCh((prev) => prev + 1);
+      } else {
+        setCurrentLine((prev) => prev + 1);
+        setCurrentCh(0);
       }
-    }, 20);
+    }, 10);
     return () => clearTimeout(timeout);
   }, [currentCh, currentLine]);
 
@@ -102,13 +103,13 @@ const Home = ({ stick }) => {
 
   useEffect(() => {
     setAnimationKey((prev) => prev + 1);
-    setTypingKey(prev => prev + 1);
+    setTypingKey((prev) => prev + 1);
   }, [theme]);
 
   useEffect(() => {
-    setLines(Array(teaser.length).fill('')); 
-    setCurrentLine(0); 
-    setCurrentCh(0); 
+    setLines(Array(teaser.length).fill(""));
+    setCurrentLine(0);
+    setCurrentCh(0);
   }, [typingKey]);
 
   return (
@@ -118,14 +119,15 @@ const Home = ({ stick }) => {
         marginTop: stick ? "-30px" : "0",
         transition: "margin-top 1s ease",
       }}
-    > 
+    >
       <HomeHelmet />
       {/*LOGO ANIMATION / HERO */}
-      <div
-        className="hero-section verticalS mb-[200px] h-[100vh] rounded-md border-none"
-      >
+      <div className="hero-section verticalS mb-[200px] h-[100vh] rounded-md border-none">
         {/*logo part*/}
-        <div key={animationKey} className="verticalC relative h-[250px] w-[300px]">
+        <div
+          key={animationKey}
+          className="verticalC relative h-[250px] w-[300px]"
+        >
           <img
             className={`${theme === "dark" ? "darkshadow" : "lightshadow"} logo-part right rounded-[11px]`}
             src={theme === "dark" ? darkmotion1 : lightmotion1}
@@ -141,33 +143,34 @@ const Home = ({ stick }) => {
 
         {/*teaser word part*/}
         <div className="relative my-10">
-
-          <div  className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"} absolute inset-0 flex justify-center items-center`}>
-            {theme === 'dark' ? <IoTv className="w-[300px] h-[300px]"/> : <IoTvOutline className="w-[300px] h-[300px]"/>}
-            
-            
+          <div
+            className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"} absolute inset-0 flex items-center justify-center`}
+          >
+            {/*{theme === 'dark' ? <IoTv className="w-[300px] h-[300px]"/> : <IoTvOutline className="w-[300px] h-[300px]"/>}*/}
+            <IoTv className="h-[300px] w-[300px]" />
           </div>
 
-
-          <div key={typingKey} className={`${theme === "dark" ? "" : "text-lightfont"} relative max-w-[75%] left-[42px] top-[-20px] z-[10] flex justify-start items-end h-[150px] w-[330px]`}>
+          <div
+            key={typingKey}
+            className={`${theme === "dark" ? "" : "text-white"} relative left-[42px] top-[-20px] z-[10] flex h-[150px] w-[330px] max-w-[75%] items-end justify-start`}
+          >
             <div>
-              {lines && lines.length <= teaser.length && lines.map((line, index) => (
-                <div key={index} className={`p-1 text-[15px] text-left`}>
-                  {line} 
-                  {(index === lines.filter(l => l).length - 1) && <span className="jumpUnderscore">{theme === 'dark' ? "_" : "|"}</span>}           
-               
-                </div>
-              ))}            
-            </div>          
-          </div>          
-
+              {lines &&
+                lines.length <= teaser.length &&
+                lines.map((line, index) => (
+                  <div key={index} className={`p-1 text-left text-[15px]`}>
+                    {line}
+                    {index === lines.filter((l) => l).length - 1 && (
+                      <span className="jumpUnderscore">
+                        {theme === "dark" ? "_" : "|"}
+                      </span>
+                    )}
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
-
-
-
-
       </div>
-    
 
       {/*PLACE HOLDER FOR HEADER*/}
       <div
@@ -203,9 +206,10 @@ const Home = ({ stick }) => {
                   </span>{" "}
                   <span>{`tishrabon:\\bio\\terminal.exe`}</span>
                 </div>
-                <div 
+                <div
                   onClick={() => terminalInputRef.current.focus()}
-                  className="flex flex-col items-start justify-start p-2 text-[16px]">
+                  className="flex flex-col items-start justify-start p-2 text-[16px]"
+                >
                   <p>
                     {" "}
                     {`>`} {intro101}{" "}
@@ -266,7 +270,7 @@ const Home = ({ stick }) => {
 
               {/*BIO*/}
 
-              <div className="rubbertapRev mb-6 rounded-3xl bg-vslight py-5 px-2 text-lg">
+              <div className="rubbertapRev mb-6 rounded-3xl bg-vslight px-2 py-5 text-lg">
                 <p>{intro101}</p>
               </div>
 
@@ -306,7 +310,7 @@ const Home = ({ stick }) => {
 
             {/*CTA/skills sm:breakpoint*/}
             <div
-              className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} hidden flex-col items-center justify-start gap-5 py-5 px-2 text-lg sm:flex`}
+              className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} hidden flex-col items-center justify-start gap-5 px-2 py-5 text-lg sm:flex`}
             >
               <span>
                 For detailed insights into my skills and tools, Click the button
@@ -375,7 +379,7 @@ const Home = ({ stick }) => {
 
           {/*CTA/skills phone:breakpoints*/}
           <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex flex-col items-center justify-start gap-5 py-5 px-2 sm:hidden`}
+            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex flex-col items-center justify-start gap-5 px-2 py-5 sm:hidden`}
           >
             <span>
               For detailed insights into my skills and tools, Click the button
@@ -411,7 +415,7 @@ const Home = ({ stick }) => {
           </div>
           {/*WORDS*/}
           <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 py-5 px-2 text-base sm:text-lg`}
+            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 px-2 py-5 text-base sm:text-lg`}
           >
             <span>
               You're currently browsing my second project, this portfolio. Since
@@ -428,7 +432,7 @@ const Home = ({ stick }) => {
             </Link>
 
             <span
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} rounded-md p-2 mx-2`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} mx-2 rounded-md p-2`}
             >
               More unique and refined projects are on the way as I'm already
               working on the next one...
@@ -459,7 +463,7 @@ const Home = ({ stick }) => {
 
           {/*WORDS*/}
           <div
-            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 py-5 px-2 text-base sm:text-lg`}
+            className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 px-2 py-5 text-base sm:text-lg`}
           >
             <span>
               Let’s be real... Why would you hire a fresher like me? Hopefully,
@@ -476,7 +480,6 @@ const Home = ({ stick }) => {
             </Link>
           </div>
         </div>
-
       </div>
     </div>
   );

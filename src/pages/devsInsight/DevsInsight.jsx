@@ -102,16 +102,16 @@ const DevsInsight = () => {
 
   return (
     <div className="otherpage-container verticalS text-center">
-      <HelmetTag title="Dev's Insight"/>
+      <HelmetTag title="Dev's Insight" />
       {/*PAGE HEADING*/}
       <PageHeading
         terminal={terminalHeading}
         marshmallow={marshmallowHeading}
       />
 
-      <div className="w-full flex justify-end my-5">
+      <div className="my-5 flex w-full justify-end">
         <DownloadCv />
-      </div>       
+      </div>
 
       <div className="verticalS w-full gap-5">
         {/*ONE LINE BIO*/}

@@ -10,10 +10,10 @@ import { ThemeProvider } from "./context/ThemeContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter >
+    <HashRouter>
       <ThemeProvider>
         <App />
       </ThemeProvider>
-    </HashRouter >
+    </HashRouter>
   </StrictMode>,
 );

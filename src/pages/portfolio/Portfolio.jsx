@@ -29,9 +29,9 @@ const Portfolio = () => {
         marshmallow={marshmallowHeading}
       />
 
-      <div className="w-full flex justify-end mb-5">
+      <div className="mb-5 flex w-full justify-end">
         <DownloadCv />
-      </div>        
+      </div>
 
       {/*PORTFOLIO CONTAINER*/}
       <div

@@ -265,7 +265,6 @@
   transform: scale(0.9);
 }
 
-
 /*LIGHT REVERSED*/
 
 .rubbertapRev {
@@ -281,14 +280,14 @@
 }
 
 .rubberbuttonRev {
-  box-shadow: inset 0 0 8px 0 #cccccc;
+  box-shadow: inset 0 0 6px 0 #cccccc;
   transition:
     transform 0.3s,
     border-radius 0.3s;
 }
 
 .rubberbuttonRev:hover {
-  box-shadow: inset 0 0 12px 2px #cccccc;
+  box-shadow: inset 0 0 10px 0 #cccccc;
   border-radius: 10px;
   transform: scale(0.94, 1.1);
 }
