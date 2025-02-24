@@ -22,17 +22,12 @@ const Footer = () => {
       className={`${theme === "dark" ? "" : ""} verticalS relative h-[1400px] w-full max-w-[1200px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] p-10 sm:w-[80vw]`}
       id="footer"
     >
-      {/*<img src="tishrabon-frost-original.svg" alt="" className="rotatingMonkz" />*/}
 
       <div
         className={`${theme === "dark" ? "" : "text-slate-400"} inset-0 mt-[50px]`}
       >
         <BsGlobe className={`rotatingSloth h-[1300px] w-[1300px]`} />
       </div>
-
-      {/*     <div className={`${theme === "dark" ? "" : "text-slate-400"} inset-0`}>
-        <BsGlobe className={`h-[100vh] w-[100vh] rotatingSloth`} />
-      </div> */}
 
       {/*MAIN CONTAINER*/}
       <div
