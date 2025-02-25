@@ -83,7 +83,7 @@ const Home = ({ stick }) => {
         setCurrentLine((prev) => prev + 1);
         setCurrentCh(0);
       }
-    }, 10);
+    }, 20);
     return () => clearTimeout(timeout);
   }, [currentCh, currentLine]);
 
@@ -97,8 +97,7 @@ const Home = ({ stick }) => {
   };
 
   const toDevsSkill = () => {
-    navigate("devs-insight#bmcRef");
-    console.log("kire?");
+    navigate("devs-insight#bmcRef");    
   };
 
   useEffect(() => {
