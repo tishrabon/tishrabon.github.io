@@ -72,8 +72,6 @@ const DevsInsight = () => {
     p1: `Honestly, I'm a fresher with zero experience. I come from a science background and am a self-taught programmer. I was majoring in Computer Science & Engineering at the University of Asia Pacific, Dhaka, Bangladesh, but paused my studies with the possibility of resuming in the future.`,
 
     p2: `I'm diving into frontend development for now, but since full-stack development is my ultimate goal and I love creating complete solutions, full-stack development is where I’m heading..`,
-
-    pz1: `I come from a science background and am a self-taught programmer. I was majoring in Computer Science & Engineering at the University of Asia Pacific, Dhaka, Bangladesh, but paused my studies with the possibility of resuming in the future.`,
   };
 
   const chapterThree = {

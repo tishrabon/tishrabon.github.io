@@ -90,7 +90,7 @@ const Portfolio = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://myshopp-dusky.vercel.app/"
+              href="https://github.com/tishrabon/psc-myShopp.git"
               className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
             >
               <FaGithub size={20} />
