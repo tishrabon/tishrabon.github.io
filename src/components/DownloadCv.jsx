@@ -8,15 +8,15 @@ const DownloadCv = () => {
     <div>
       <div className={`kire`}>
         <a
-          href="/tishrabonCV.pdf"
-          dowload="Towhidul Islam Shrabon CV"
+          href="/tishrabon-resume.pdf"
+          // download="tishrabon-resume.pdf"
           className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 rounded-md px-6 py-4`}
         >
           <FaFileDownload
             size={30}
             className={`${theme === "dark" ? "" : "text-lightmain"}`}
           />
-          <p className="mt-1">Get CV</p>
+          <p className="mt-1">Resume</p>
         </a>
       </div>
     </div>
