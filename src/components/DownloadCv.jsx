@@ -9,7 +9,7 @@ const DownloadCv = () => {
       <div className={`kire`}>
         <a
           href="/tishrabon-resume.pdf"
-          // download="tishrabon-resume.pdf"
+          download="tishrabon-resume.pdf"
           className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} horizontalC gap-1 rounded-md px-6 py-4`}
         >
           <FaFileDownload

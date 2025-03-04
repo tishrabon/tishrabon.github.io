@@ -125,7 +125,7 @@ const Home = ({ stick }) => {
         {/*logo part*/}
         <div
           key={animationKey}
-          className="verticalC relative h-[250px] w-[300px]"
+          className="verticalC relative h-[230px] w-[300px]"
         >
           <img
             className={`${theme === "dark" ? "darkshadow" : "lightshadow"} logo-part right rounded-[11px]`}
@@ -140,8 +140,10 @@ const Home = ({ stick }) => {
           />
         </div>
 
+        <p className="mb-14 text-[20px]">Code Beyond_</p>
+
         {/*teaser word part*/}
-        <div className="relative my-10">
+        <div className="relative">
           <div
             className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"} absolute inset-0 flex items-center justify-center`}
           >
