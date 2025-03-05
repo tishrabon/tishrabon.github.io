@@ -94,7 +94,7 @@ export const FaqData = [
 
   {
     getCmd: `op --alt`,
-    type: `opal11`,
+    type: `opalt`,
     id: `1011`,
   },
 

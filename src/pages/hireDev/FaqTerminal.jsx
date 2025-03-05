@@ -14,7 +14,43 @@ import { TbPointFilled } from "react-icons/tb";
 import { HiLightBulb } from "react-icons/hi";
 
 const FaqTerminal = () => {
-  const demo = `[ans to q1] I approach app development from multiple perspectives. I think about how users' needs evolve over time, what they want now, how they’ve changed, how they’ll change in the future, Whether it’s a long-term or short-term project, I might keep users' expectations low with high satisfaction, so that later I can drop an exclusive feature that will blow their minds. This kind of vision shapes both my design and programming work. I'm not just a programmer. I'm a package of solid coding skills and long-term vision with a strategic mindset`;
+
+  const theChuckNorris = [
+
+    `Chuck Norris doesn’t write code. He tells the computer what to do, and the computer does it out of fear. ~ Just a little fun. Chuck Norris might've chuckled.`,
+
+    `Chuck Norris doesn’t use version control. He simply types 'git push' and the code is pushed into perfection. ~ Just a bit of humor. If Chuck Norris laughed, it would be legendary.`,
+
+    `Chuck Norris doesn’t need to optimize his code. His code optimizes itself out of fear of disappointing him. ~ Just a joke, but Chuck Norris would say, ‘It’s not bad.’`,
+
+    `Chuck Norris doesn’t need a coffee break. His sheer presence makes the coffee wake up on its own. ~ Just some fun. Chuck Norris approves, and that’s all that matters.`,
+
+    `Chuck Norris once completed a project in a day... and then rewrote it in a single line of code, just to show off. ~ Just a bit of fun. If Chuck Norris had a sense of humor, this would be it.`,
+
+    `Chuck Norris doesn’t need a debugger. His code works the first time. Every time. ~ Just a bit of fun. Chuck Norris doesn’t laugh, but this would make him nod.`,
+
+    `Why did Chuck Norris become a recruiter? Because when he says, 'You’re hired,' there’s no arguing. ~ Just a joke, but Chuck Norris would say, ‘It’s not bad.’`,
+
+    `Chuck Norris doesn’t need a keyboard. He just looks at the screen, and the code writes itself. ~ Just some fun. Chuck Norris approves, and that’s all that matters.`,
+
+    `Chuck Norris doesn’t need a meeting. When he shows up, everyone already knows the agenda. ~ Just a bit of fun. Chuck Norris doesn’t laugh, but this would make him nod.`,
+
+    `Chuck Norris doesn’t need to check his emails. The emails check themselves for fear of missing his response. ~ Just a bit of humor. If Chuck Norris laughed, it would be legendary.`,
+
+    `Chuck Norris doesn't need a password manager. He just stares at his passwords, and they remember themselves. ~ Just a joke, but Chuck Norris would say, ‘It’s not bad.’`,
+
+    `Chuck Norris doesn’t need a code review. The code reviews itself to make sure it’s worthy of his attention. ~ Just a little fun. Chuck Norris might've chuckled.`,
+
+    `Chuck Norris can debug his code by simply looking at it. The bugs fix themselves out of fear. ~ Just a bit of fun. If Chuck Norris had a sense of humor, this would be it.`,
+
+    `Chuck Norris doesn’t need a break. The break takes a break when he’s around. ~ Just a bit of fun. Chuck Norris doesn’t laugh, but this would make him nod.`,
+
+    `Chuck Norris doesn’t need a code editor. His mind auto-corrects every line before it even exists. ~ Just some fun. Chuck Norris approves, and that’s all that matters.`,
+
+    `Chuck Norris doesn’t need a programming language. The code understands his thoughts without words. ~ Just a bit of humor. If Chuck Norris laughed, it would be legendary.`,
+
+    `Chuck Norris doesn’t use a VPN. The internet is always safe when he’s browsing. ~ Just a little fun. Chuck Norris might've chuckled.`
+  ]  
 
   const navigate = useNavigate();
   const { toggleTheme } = useContext(themeContext);
@@ -42,10 +78,10 @@ const FaqTerminal = () => {
       } else if (found.type === "switchtheme") {
         toggleTheme();
       } else if (found.type === "opalt") {
-        let temp = `I'm sorry that you didn't like this process. How can I make it better? I would deeply appreciate your feedback! You can also switch to Marshmallow Mode—it's designed to be effortless and smooth.`;
+        let temp = `I’m genuinely thrilled you’ve explored my work this far, it means a lot! If the process wasn’t exactly what you were hoping for, I’d love to hear your thoughts on alternatives. Feel free to reach out at tishrabon.official@gmail.com, or maybe connect on LinkedIn: linkedin.com/in/tishrabon or X/twitter @tishrabon to keep the conversation going! I’d be honored to keep the conversation going and explore future opportunities together!`;
         setStack([...stack, temp]);
       } else if (found.type === "teabreak") {
-        let tempTea = `This is a fun goal made to bring a smile to your face. Not done yet, working on it...`;
+        let tempTea = theChuckNorris[Math.floor(Math.random() * theChuckNorris.length)];
         setStack([...stack, tempTea]);
       } else {
         setStack([...stack, "Sorry! Try again!"]);
