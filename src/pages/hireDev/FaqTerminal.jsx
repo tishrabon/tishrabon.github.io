@@ -14,9 +14,7 @@ import { TbPointFilled } from "react-icons/tb";
 import { HiLightBulb } from "react-icons/hi";
 
 const FaqTerminal = () => {
-
   const theChuckNorris = [
-
     `Chuck Norris doesn’t write code. He tells the computer what to do, and the computer does it out of fear. ~ Just a little fun. Chuck Norris might've chuckled.`,
 
     `Chuck Norris doesn’t use version control. He simply types 'git push' and the code is pushed into perfection. ~ Just a bit of humor. If Chuck Norris laughed, it would be legendary.`,
@@ -49,8 +47,8 @@ const FaqTerminal = () => {
 
     `Chuck Norris doesn’t need a programming language. The code understands his thoughts without words. ~ Just a bit of humor. If Chuck Norris laughed, it would be legendary.`,
 
-    `Chuck Norris doesn’t use a VPN. The internet is always safe when he’s browsing. ~ Just a little fun. Chuck Norris might've chuckled.`
-  ]  
+    `Chuck Norris doesn’t use a VPN. The internet is always safe when he’s browsing. ~ Just a little fun. Chuck Norris might've chuckled.`,
+  ];
 
   const navigate = useNavigate();
   const { toggleTheme } = useContext(themeContext);
@@ -81,7 +79,8 @@ const FaqTerminal = () => {
         let temp = `I’m genuinely thrilled you’ve explored my work this far, it means a lot! If the process wasn’t exactly what you were hoping for, I’d love to hear your thoughts on alternatives. Feel free to reach out at tishrabon.official@gmail.com, or maybe connect on LinkedIn: linkedin.com/in/tishrabon or X/twitter @tishrabon to keep the conversation going! I’d be honored to keep the conversation going and explore future opportunities together!`;
         setStack([...stack, temp]);
       } else if (found.type === "teabreak") {
-        let tempTea = theChuckNorris[Math.floor(Math.random() * theChuckNorris.length)];
+        let tempTea =
+          theChuckNorris[Math.floor(Math.random() * theChuckNorris.length)];
         setStack([...stack, tempTea]);
       } else {
         setStack([...stack, "Sorry! Try again!"]);

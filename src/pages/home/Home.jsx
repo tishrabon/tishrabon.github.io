@@ -25,6 +25,7 @@ import {
   FaCss3Alt,
   FaHtml5,
 } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
 
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiRedux, SiFirebase } from "react-icons/si";
@@ -51,7 +52,7 @@ const Home = ({ stick }) => {
   const holla = "I'm your frontend react dev, Shrabon!";
 
   const intro101 =
-    "Focused on crafting and counting every tiny aspect. Committed to perfection & originality. Urged to make things happen with a deep focus on UI+UX. These are not just what I do; they are a part of who I am.";
+    "I will deliver you pixel-perfect UI+UX with obsessive attention to detail. Your website will embody true originality and flawless execution. I don't just create interfaces, I craft experiences that demand attention and drive results.";
 
   const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
 
@@ -97,7 +98,7 @@ const Home = ({ stick }) => {
   };
 
   const toDevsSkill = () => {
-    navigate("devs-insight#bmcRef");    
+    navigate("devs-insight#bmcRef");
   };
 
   useEffect(() => {
@@ -303,7 +304,7 @@ const Home = ({ stick }) => {
               <p
                 className={`${theme === "dark" ? "border-main" : ""} verticalC border-b pb-6 text-xl`}
               >
-                Solid Skills Behind My Coding
+                Skills Behind My Coding
                 <IoMdArrowDown className="inline sm:hidden" />
                 <FiArrowRight className="hidden sm:inline" />
               </p>
@@ -329,10 +330,20 @@ const Home = ({ stick }) => {
 
           {/*tools glimpse*/}
           <div className="verticalC gap-y-2">
-            {/*js*/}
-            <div className={`${toolsClass}`}>
+            {/*js ts*/}
+            {/* <div className={`${toolsClass}`}>
               <FaJsSquare size={70} />
               <p className="text-sm">js</p>
+            </div> */}
+            <div className="horizontalC gap-x-2">
+              <div className={`${toolsClass}`}>
+                <FaJsSquare size={70} />
+                <p className="text-sm">js</p>
+              </div>
+              <div className={`${toolsClass}`}>
+                <BiLogoTypescript size={100} />
+                <p className="text-sm">ts</p>
+              </div>
             </div>
 
             {/*html css*/}

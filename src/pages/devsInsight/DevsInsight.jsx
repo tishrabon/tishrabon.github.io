@@ -32,6 +32,8 @@ import {
   FaCss3Alt,
   FaHtml5,
 } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
+
 import { SiAdobeillustrator } from "react-icons/si";
 import { GiPlantRoots } from "react-icons/gi";
 import { FaPaintBrush } from "react-icons/fa";
@@ -207,6 +209,11 @@ const DevsInsight = () => {
                     </div>
 
                     <div className={`${toolsClass}`}>
+                      <BiLogoTypescript size={70} />
+                      <p className="text-sm">ts</p>
+                    </div>
+
+                    <div className={`${toolsClass}`}>
                       <FaHtml5 size={70} />
                       <p className="text-sm">html</p>
                     </div>
@@ -216,6 +223,15 @@ const DevsInsight = () => {
                       <p className="text-sm">css</p>
                     </div>
                   </div>
+
+                  <p
+                    className={`${theme === "dark" ? "" : ""} horizontalS mb-5 mt-[-16px] w-full gap-2 px-4 text-left text-sm`}
+                  >
+                    <span>
+                      <TbPointFilled />
+                    </span>{" "}
+                    TypeScript: Latest addition, enhancing my expertise...
+                  </p>
                 </div>
 
                 {/*FRAMEWORKS */}

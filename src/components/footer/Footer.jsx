@@ -22,7 +22,6 @@ const Footer = () => {
       className={`${theme === "dark" ? "" : ""} verticalS relative h-[1400px] w-full max-w-[1200px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] p-10 sm:w-[80vw]`}
       id="footer"
     >
-
       <div
         className={`${theme === "dark" ? "" : "text-slate-400"} inset-0 mt-[50px]`}
       >
