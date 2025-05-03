@@ -95,11 +95,7 @@ const HireDev = () => {
                 className={`${theme === "dark" ? "text-vsmain" : "text-lightmain"}`}
               />
               <span className="">
-                I'm a fresher & this is my 2nd project, reflecting the quality
-                and uniqueness of my work. I designed this portfolio with
-                multiple perspectives in mind so that it can fit into even more
-                paradigms, and I’ll do even better when I have the opportunity
-                to grow in a real work environment.
+                This is my second project, reflecting the quality and uniqueness of my work. I designed this portfolio with multiple perspectives in mind so it can adapt across different paradigms, and I’m ready to deliver even more when given the opportunity to grow in a real work environment.
               </span>
             </div>
 

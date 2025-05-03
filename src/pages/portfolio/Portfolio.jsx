@@ -55,14 +55,12 @@ const Portfolio = () => {
 
           {/*some words about my one and only project to show yall*/}
           <div className={`${theme === "dark" ? "" : ""} w-full text-lg`}>
-            Here’s my first project. This portfolio itself is my second,
-            reflecting the progress from the first. As I continue building, you
-            can expect more refined and impactful work. For now, this gives you
-            a glimpse of where I’m heading.
+            Here are my original projects, each crafted with intent and creativity. As I continue building, you can expect more refined and impactful work. For now, this gives you a glimpse of where I’m heading.
           </div>
         </div>
 
         {/*each sfp-show container*/}
+        {/* myShopp sfp */}
         <div
           className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} verticalS mx-5 w-full gap-5 px-2 py-5`}
         >
@@ -116,7 +114,7 @@ const Portfolio = () => {
               applied my knowledge. Some key highlights are listed below:
             </div>
 
-            <ul className={`list-disc pl-5 text-left`}>
+            <ul className={`list-disc pl-5 text-left max-w-[500px] flex flex-col justify-between items-start gap-2`}>
               <li>Create account, like products, and add to the cart.</li>
               <li>Access data from anywhere after logging in.</li>
               <li>Admin panel for viewing necessary user data.</li>
@@ -124,6 +122,71 @@ const Portfolio = () => {
             </ul>
           </div>
         </div>
+
+
+        {/* pro active sfp */}
+        <div
+          className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} verticalS mx-5 w-full gap-5 px-2 py-5`}
+        >
+          {/*project title*/}
+          <p
+            className={`${theme === "dark" ? "rounded-md bg-vsmain" : "rubbertapRev rounded-[15px]"} px-4 py-2 text-base`}
+          >
+            +proActive beta - 3 in 1
+          </p>
+
+          {/*project cover display*/}
+          <div
+            className={`verticalC h-[170px] w-[200px] overflow-hidden rounded-[16px] sm:h-[200px] sm:w-[250px]`}
+          >
+            <img
+              src="/pro-active-plus.jpg"
+              alt="tishrabon-project1-myShopp"
+              loading="lazy"
+              className={`h-full w-full object-cover`}
+            />
+          </div>
+
+          {/*source code and live demo links*/}
+          <div className={`horizontalC w-full gap-2 text-sm`}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/tishrabon/psc-pro-active-plus.git"
+              className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
+            >
+              <FaGithub size={20} />
+              <p>sourceCode</p>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://pro-active-plus.vercel.app/"
+              className={`${theme === "dark" ? "bg-vsmain" : "bg-slate-200"} verticalC min-h-[50px] w-[110px] rounded-md p-1`}
+            >
+              <MdOutlineLiveTv size={20} />
+              <p>liveDemo</p>
+            </a>
+          </div>
+
+          {/*description about project*/}
+          <div className="verticalS gap-5">
+            <div>
+              A 3-in-1 tool blending Pomodoro, Metronome, and ambient sounds to help you shape a focused, customizable workspace. All wrapped in a minimalist, intuitive design.
+            </div>
+
+            <ul className={`list-disc pl-5 text-left max-w-[500px] flex flex-col justify-between items-start gap-2`}>
+              <li>Pomodoro: Customizable format, session labels. Metronome: Set BPM, choose tick sound. Soothing ambient sounds with user-selected options.</li>
+              <li>Seamless experience: Easily toggle Metronome + background music while the clock is running, keeping them both or any specific one.</li>
+              <li>State persistence with Redux/Persist: Clock and app state stay smooth even after page reload or browser close.1</li>
+              <li>Sound fetching from Freesound API: Caches sounds to save data after the first load, making future access quicker.</li>
+            </ul>
+
+          </div>
+        </div>
+
+
       </div>
 
       {/*side skills*/}

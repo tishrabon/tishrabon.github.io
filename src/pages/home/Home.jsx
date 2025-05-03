@@ -430,11 +430,13 @@ const Home = ({ stick }) => {
             className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 px-2 py-5 text-base sm:text-lg`}
           >
             <span>
-              You're currently browsing my second project, this portfolio. Since
+              You’re currently browsing my second project, this portfolio. I now have three projects total, but I believe this one deserves the spotlight! Curious to explore the others? Click the button below!
+            </span>
+
+            {/* You're currently browsing my second project, this portfolio. Since
               I only have one other project at the moment, I believe it's best
               to keep things simple! Curious to see my work anyway? Click the
-              button below!
-            </span>
+              button below! */}
 
             <Link
               className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}
@@ -444,7 +446,7 @@ const Home = ({ stick }) => {
             </Link>
 
             <span
-              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} mx-2 rounded-md p-2`}
+              className={`${theme === "dark" ? "darkshadow bg-main text-vsmain" : "rubbertap2"} mx-2 rounded-md p-2 px-4`}
             >
               More unique and refined projects are on the way as I'm already
               working on the next one...
@@ -478,11 +480,9 @@ const Home = ({ stick }) => {
             className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 px-2 py-5 text-base sm:text-lg`}
           >
             <span>
-              Let’s be real... Why would you hire a fresher like me? Hopefully,
-              there are plenty of good reasons! If you're looking for a fresher
-              dev with originality at their core, click the button below to
-              learn more.
+              Let’s be real... Why bring me on board? Hopefully, there are plenty of good reasons! If you’re looking for a developer with originality at their core, click below to learn more.              
             </span>
+
 
             <Link
               className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}

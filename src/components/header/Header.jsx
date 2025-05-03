@@ -170,8 +170,8 @@ const Header = ({ stick }) => {
               className={`${navpass ? "show-nav" : ""} navLinks ${theme === "dark" ? "text-[13px] text-main" : "text-[14px] text-lightfont2"} mb-1 text-left`}
             >
               {theme === "dark"
-                ? `devs:\\now\\status> working on a React+TypeScript project to launch soon..`
-                : `Dev's Current Status: Working on a React+TypeScript project to launch soon...`}
+                ? `devs:\\now\\status> next project underway && open for roles..`
+                : `Dev's Current Status: Next project underway · Open for roles..`}
             </p>
 
             {navs.map((link, index) => (
