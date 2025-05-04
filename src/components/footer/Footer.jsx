@@ -120,7 +120,7 @@ const Footer = () => {
           </p>
 
           <p className={`text-xs`}>
-            All rights reserved. Unauthorized use of this code is strictly
+            &copy; {new Date().getFullYear()} All rights reserved. Unauthorized use of this code is strictly
             prohibited.
           </p>
         </div>
