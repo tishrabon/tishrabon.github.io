@@ -54,7 +54,8 @@ const Home = ({ stick }) => {
   const intro101 =
     "I will deliver you pixel-perfect UI+UX with obsessive attention to detail. Your website will embody true originality and flawless execution. I don't just create interfaces, I craft experiences that demand attention and drive results.";
 
-  const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
+  const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "rubbertapRevJr text-lightmain"} verticalC m-2 h-auto w-24 rounded-md p-2`;
+  // const toolsClass = `${theme === "dark" ? "bg-main text-vsmain" : "bg-lightmain text-vslight"} verticalC m-2 h-24 w-24 rounded-md p-2`;
 
   // hero/typewriter/teaser
   const teaser = [
@@ -341,7 +342,7 @@ const Home = ({ stick }) => {
                 <p className="text-sm">js</p>
               </div>
               <div className={`${toolsClass}`}>
-                <BiLogoTypescript size={100} />
+                <BiLogoTypescript size={70} />
                 <p className="text-sm">ts</p>
               </div>
             </div>
@@ -430,7 +431,9 @@ const Home = ({ stick }) => {
             className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 px-2 py-5 text-base sm:text-lg`}
           >
             <span>
-              You’re currently browsing my second project, this portfolio. I now have three projects total, but I believe this one deserves the spotlight! Curious to explore the others? Click the button below!
+              You’re currently browsing my second project, this portfolio. I now
+              have three projects total, but I believe this one deserves the
+              spotlight! Curious to explore the others? Click the button below!
             </span>
 
             {/* You're currently browsing my second project, this portfolio. Since
@@ -480,9 +483,10 @@ const Home = ({ stick }) => {
             className={`${theme === "dark" ? "terminaltap rounded-md" : "rubbertapRev rounded-[20px]"} flex w-full flex-col items-center justify-start gap-5 px-2 py-5 text-base sm:text-lg`}
           >
             <span>
-              Let’s be real... Why bring me on board? Hopefully, there are plenty of good reasons! If you’re looking for a developer with originality at their core, click below to learn more.              
+              Let’s be real... Why bring me on board? Hopefully, there are
+              plenty of good reasons! If you’re looking for a developer with
+              originality at their core, click below to learn more.
             </span>
-
 
             <Link
               className={`${theme === "dark" ? "terminalbutton" : "rubberbuttonRev"} rounded-md p-2 text-base`}

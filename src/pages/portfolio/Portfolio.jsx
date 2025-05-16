@@ -55,7 +55,10 @@ const Portfolio = () => {
 
           {/*some words about my one and only project to show yall*/}
           <div className={`${theme === "dark" ? "" : ""} w-full text-lg`}>
-            Here are my original projects, each crafted with intent and creativity. As I continue building, you can expect more refined and impactful work. For now, this gives you a glimpse of where I’m heading.
+            Here are my original projects, each crafted with intent and
+            creativity. As I continue building, you can expect more refined and
+            impactful work. For now, this gives you a glimpse of where I’m
+            heading.
           </div>
         </div>
 
@@ -114,7 +117,9 @@ const Portfolio = () => {
               applied my knowledge. Some key highlights are listed below:
             </div>
 
-            <ul className={`list-disc pl-5 text-left max-w-[500px] flex flex-col justify-between items-start gap-2`}>
+            <ul
+              className={`flex max-w-[500px] list-disc flex-col items-start justify-between gap-2 pl-5 text-left`}
+            >
               <li>Create account, like products, and add to the cart.</li>
               <li>Access data from anywhere after logging in.</li>
               <li>Admin panel for viewing necessary user data.</li>
@@ -122,7 +127,6 @@ const Portfolio = () => {
             </ul>
           </div>
         </div>
-
 
         {/* pro active sfp */}
         <div
@@ -173,20 +177,35 @@ const Portfolio = () => {
           {/*description about project*/}
           <div className="verticalS gap-5">
             <div>
-              A 3-in-1 tool blending Pomodoro, Metronome, and ambient sounds to help you shape a focused, customizable workspace. All wrapped in a minimalist, intuitive design.
+              A 3-in-1 tool blending Pomodoro, Metronome, and ambient sounds to
+              help you shape a focused, customizable workspace. All wrapped in a
+              minimalist, intuitive design.
             </div>
 
-            <ul className={`list-disc pl-5 text-left max-w-[500px] flex flex-col justify-between items-start gap-2`}>
-              <li>Pomodoro: Customizable format, session labels. Metronome: Set BPM, choose tick sound. Soothing ambient sounds with user-selected options.</li>
-              <li>Seamless experience: Easily toggle Metronome + background music while the clock is running, keeping them both or any specific one.</li>
-              <li>State persistence with Redux/Persist: Clock and app state stay smooth even after page reload or browser close.1</li>
-              <li>Sound fetching from Freesound API: Caches sounds to save data after the first load, making future access quicker.</li>
+            <ul
+              className={`flex max-w-[500px] list-disc flex-col items-start justify-between gap-2 pl-5 text-left`}
+            >
+              <li>
+                Pomodoro: Customizable format, session labels. Metronome: Set
+                BPM, choose tick sound. Soothing ambient sounds with
+                user-selected options.
+              </li>
+              <li>
+                Seamless experience: Easily toggle Metronome + background music
+                while the clock is running, keeping them both or any specific
+                one.
+              </li>
+              <li>
+                State persistence with Redux/Persist: Clock and app state stay
+                smooth even after page reload or browser close.1
+              </li>
+              <li>
+                Sound fetching from Freesound API: Caches sounds to save data
+                after the first load, making future access quicker.
+              </li>
             </ul>
-
           </div>
         </div>
-
-
       </div>
 
       {/*side skills*/}

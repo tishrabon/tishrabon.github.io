@@ -224,14 +224,14 @@ const DevsInsight = () => {
                     </div>
                   </div>
 
-                  <p
+                  {/* <p
                     className={`${theme === "dark" ? "" : ""} horizontalS mb-5 mt-[-16px] w-full gap-2 px-4 text-left text-sm`}
                   >
                     <span>
                       <TbPointFilled />
                     </span>{" "}
                     TypeScript: Latest addition, enhancing my expertise...
-                  </p>
+                  </p> */}
                 </div>
 
                 {/*FRAMEWORKS */}
@@ -312,14 +312,14 @@ const DevsInsight = () => {
                     </div>
                   </div>
 
-                  <p
+                  {/* <p
                     className={`${theme === "dark" ? "" : ""} horizontalS mb-5 mt-[-16px] w-full gap-2 px-4 text-left text-sm`}
                   >
                     <span>
                       <TbPointFilled />
                     </span>{" "}
                     reactHelmet for SEO Optimization
-                  </p>
+                  </p> */}
                 </div>
 
                 {/*OTHER TOOLS */}
